@@ -1,0 +1,28 @@
+{
+  "name": "com.dboi.devolo",
+  "version": "2.0.10",
+  "description": "This app adds support for the Z-wave devices made by Devolo (http://www.devolo.com).",
+  "main": "app.js",
+  "requires": true,
+  "dependencies": {
+    "homey-log": "^1.0.1",
+    "homey-meshdriver": "^1.2.22"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "run": "copy /y app.json.base app.json && homeyConfig compose && athom app run",
+    "validate": "copy /y app.json.base app.json && homeyConfig compose && athom app validate",
+    "build": "copy /y app.json.base app.json && homeyConfig compose && athom app build",
+    "compose": "copy /y app.json.base app.json && homeyConfig compose",
+    "install": "copy /y app.json.base app.json && homeyConfig compose && athom app install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/oickler/com.dboi.devolo.git"
+  },
+  "author": "Oliver Ickler",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/oickler/com.dboi.devolo/issues"
+  }
+}

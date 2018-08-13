@@ -1,0 +1,26 @@
+{
+    "id": "mt2650",
+    "name": {
+      "en": "Radiator Control MT2650"
+    },
+    "class": "thermostat",
+    "capabilities": [
+      "measure_battery",
+      "measure_temperature",
+      "target_temperature"
+    ],
+    "images": {
+      "large": "/drivers/mt2650/assets/images/large.png",
+      "small": "/drivers/mt2650/assets/images/small.png"
+    },
+    "zwave": {
+      "manufacturerId": 2,
+      "productTypeId": [
+        5
+      ],
+      "productId": [
+        373
+      ],
+      "zwaveAllianceProductId": 1506
+    }
+  }

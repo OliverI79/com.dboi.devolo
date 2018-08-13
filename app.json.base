@@ -1,0 +1,44 @@
+{
+  "id": "com.dboi.devolo",
+  "sdk": 2,
+  "name": {
+    "en": "Devolo Home Control"
+  },
+  "version": "2.0.10",
+  "compatibility": ">=1.5.3",
+  "description": {
+    "en": "Devolo Home Control device support"
+  },
+  "category": [
+    "appliances",
+    "lights",
+    "security"
+  ],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Oliver Ickler",
+    "email": "smartdev@oliver-ickler.de"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Oliver Ickler",
+        "email": "smartdev@oliver-ickler.de"
+      }
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/oickler/com.dboi.devolo/issues"
+  },
+  "flow": {
+    "triggers": [
+	],
+    "actions": [
+	]
+  },
+  "drivers": [
+  ]
+}

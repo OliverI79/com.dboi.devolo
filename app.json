@@ -1,0 +1,3421 @@
+{
+  "id": "com.dboi.devolo",
+  "sdk": 2,
+  "name": {
+    "en": "Devolo Home Control"
+  },
+  "version": "2.0.10",
+  "compatibility": ">=1.5.3",
+  "description": {
+    "en": "Devolo Home Control device support"
+  },
+  "category": [
+    "appliances",
+    "lights",
+    "security"
+  ],
+  "images": {
+    "large": "/assets/images/large.png",
+    "small": "/assets/images/small.png"
+  },
+  "author": {
+    "name": "Oliver Ickler",
+    "email": "smartdev@oliver-ickler.de"
+  },
+  "contributors": {
+    "developers": [
+      {
+        "name": "Oliver Ickler",
+        "email": "smartdev@oliver-ickler.de"
+      }
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/oickler/com.dboi.devolo/issues"
+  },
+  "flow": {
+    "triggers": [
+      {
+        "id": "mt2649_button",
+        "title": {
+          "en": "Then button is pressed"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2649"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button",
+        "title": {
+          "en": "Then button is pressed"
+        },
+        "tokens": [
+          {
+            "name": "num",
+            "type": "number",
+            "title": {
+              "en": "num"
+            }
+          }
+        ],
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button1_single",
+        "title": {
+          "en": "Button 1 single press"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button2_single",
+        "title": {
+          "en": "Button 2 single press"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button3_single",
+        "title": {
+          "en": "Button 3 single press"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button4_single",
+        "title": {
+          "en": "Button 4 single press"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button1_double",
+        "title": {
+          "en": "Button 1 double press"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button2_double",
+        "title": {
+          "en": "Button 2 double press"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button3_double",
+        "title": {
+          "en": "Button 3 double press"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button4_double",
+        "title": {
+          "en": "Button 4 double press"
+        },
+        "args": [
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      }
+    ],
+    "actions": []
+  },
+  "drivers": [
+    {
+      "id": "mt2646",
+      "name": {
+        "en": "Metering Plug MT2646"
+      },
+      "class": "socket",
+      "capabilities": [
+        "measure_power",
+        "meter_power",
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/mt2646/assets/images/large.png",
+        "small": "/drivers/mt2646/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "1",
+          "value": 720,
+          "label": {
+            "en": "Watt Meter Report Period",
+            "de": "Watt Zähler"
+          },
+          "hint": {
+            "en": "This configuration parameter determines how often meter reporting of instantaneous watt usage is reported automatically.  Each unit is 5 seconds.    The maximum interval to report its instant power consumption is 45 hours (5s*32767/3600=45hr).",
+            "de": "720*5s=3600s=1h"
+          },
+          "zwave": {
+            "index": 1,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 32767
+          },
+          "type": "number"
+        },
+        {
+          "id": "2",
+          "value": 6,
+          "label": {
+            "en": "KWH Meter Report Period:",
+            "de": "Berichtszeitraum"
+          },
+          "hint": {
+            "en": "This parameter controls the frequency at which the kWh value of the meter is reported to the node in association group 1.  This setting is in units of 10 minutes. The maximum interval to report its Accumulated Power Consumption (KW/h) is 227.55 days (10min*32767/1440=227.55 days).",
+            "de": "6*10min=1h"
+          },
+          "zwave": {
+            "index": 2,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 32767
+          },
+          "type": "number"
+        },
+        {
+          "id": "3",
+          "value": 1300,
+          "label": {
+            "en": "Threshold of current for Load Caution"
+          },
+          "hint": {
+            "en": "This is a warning when the current of load over the preset threshold value, if the setting value is 1300, when the load current of Relay1 over this value, Home Control Metering Plug will send current meter report to warn the Group1 node, the Range of the setting value is from 10 to 1300,and the default value is 1300."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 1300
+          },
+          "type": "number"
+        },
+        {
+          "id": "4",
+          "value": 10000,
+          "label": {
+            "en": "Threshold of KWh for Load Caution"
+          },
+          "hint": {
+            "en": "This is a warning when the KWh of load over the preset threshold value, If the \nsetting value is 10000, when the Accumulated Power Consumption of Relay1 over this value, Home Control Metering Plug will send KWH meter report to warn the Group1 node, \nminimum value is 1KWh and default value is 10000 kWh."
+          },
+          "zwave": {
+            "index": 4,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 10000
+          },
+          "type": "number"
+        },
+        {
+          "id": "5",
+          "value": "1",
+          "label": {
+            "en": "Restore switch state mode"
+          },
+          "hint": {
+            "en": "Whenever the AC power return from lost, Home Control Metering Plug will restore the switch state which could be SWITCH OFF、LAST SWITCH STATE、SWITCH ON. The default setting is LAST SWITCH STATE. "
+          },
+          "zwave": {
+            "index": 5,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Upon the return of AC power, the switch will remain Off."
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Upon the return of AC power, the switch will return to the state it was in when the power was turned off."
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Upon the return of AC power, the switch will turn On."
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "6",
+          "value": "1",
+          "label": {
+            "en": "Mode of switch off function",
+            "de": "2 KWH Zähler"
+          },
+          "hint": {
+            "en": "This configuration parameter determines how the switch will respond to a received SWITCH OFF command."
+          },
+          "zwave": {
+            "index": 6,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "7",
+          "value": "1",
+          "label": {
+            "en": "LED indication mode",
+            "de": "Berichtszeitraum"
+          },
+          "hint": {
+            "en": "This parameter determines the state of the LED display."
+          },
+          "zwave": {
+            "index": 7,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "The LED follows the state of the switch.",
+                "de": "Gerätestatus anzeigen"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Night Mode - When the switch is On, the LED is Off, and when the switch is Off, the LED is On.",
+                "de": "Nachtmodus anzeigen"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Flash Mode - When the state of the switch changes, the LED will be on for one second and then will turn off.",
+                "de": "One-Flash-Modus"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "8",
+          "value": 0,
+          "label": {
+            "en": "Auto off timer"
+          },
+          "hint": {
+            "en": "Automatic Shut-Off Setting.  This parameter determines the amount of time before the switch is automatically turned off after it has been turned on."
+          },
+          "zwave": {
+            "index": 8,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 32767
+          },
+          "type": "number"
+        },
+        {
+          "id": "9",
+          "value": "0",
+          "label": {
+            "en": "RF off command mode"
+          },
+          "hint": {
+            "en": "This parameter determines how the switch responds to the receipt of a SWITCH_ALL_OFF command."
+          },
+          "zwave": {
+            "index": 9,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "When SWITCH ALL OFF is received, the MT02646 turns Off."
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "When SWITCH ALL OFF is received, the MT02646 ignores the command and does nothing."
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "When SWITCH ALL OFF is received, the MT02646 will turn On if it is Off, and will turn Off if it is On."
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "When SWITCH ALL OFF is received, the MT02646 turns On."
+              }
+            }
+          ],
+          "type": "dropdown"
+        }
+      ],
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          1
+        ],
+        "productId": [
+          17
+        ],
+        "zwaveAllianceProductId": 1129,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1129/PAN11-1B manual-20140816.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "1.  Put your Z-Wave controller into inclusion mode by following the instructions provided by the controller manufacturer. \n2.  Pressing On/Off button three times within 2 seconds will enter inclusion \n     mode on the switch. "
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "1.  Put your Z-Wave controller into exclusion mode by following the instructions provided by the controller manufacturer. \n2.  Pressing On/Off button three times within 2 seconds will enter exclusion \n     mode on the switch. "
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "mt2647",
+      "name": {
+        "en": "Motion Sensor MT2647"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_motion",
+        "alarm_tamper",
+        "measure_battery",
+        "measure_luminance",
+        "measure_temperature"
+      ],
+      "images": {
+        "large": "/drivers/mt2647/assets/images/large.png",
+        "small": "/drivers/mt2647/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "2",
+          "value": 255,
+          "label": {
+            "en": "Basic Set Level",
+            "de": "Basic Set Level"
+          },
+          "hint": {
+            "en": "Setting the BASIC command value to turn on the light. The 0xFF(-1) means turn on the light. For dimmer equipment 1 to 100 means the light strength.\n0 means turn off the light.",
+            "de": "Einstellung des BASIC command value (Kommando/Sollwert):\n0xFF(-1 ) = Licht einschalten\nDimmer 1 bis 100 = Helligkeit erhöhen\n0 = Licht ausschalten."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "3",
+          "value": 80,
+          "label": {
+            "en": "PIR Sensitivity",
+            "de": "PIR Sensibilität"
+          },
+          "hint": {
+            "en": "PIR sensitivity settings.\n0 means disable the PIR motion.\n1 means the lowest sensitivity,\n99 means the highest sensitivity.\nHigh sensitivity means can detected long distance, but if there is more noise signal in the environment, it will re-trigger too frequency. ",
+            "de": "PIR Sensibilität einstellen:\n• 0 = PIR Bewegungsmelder deaktivieren\n• 1 = niedrigste Sensibilitätsstufe\n• 99 = höchste Sensibilitätsstufe\nJe höher die Sensibilitätsstufe desto höher der Erfassungsradius der Bewegung. Überwiegt der Geräuschpegel/Rauschsignal schaltet das Gerät auf Frequenz."
+          },
+          "zwave": {
+            "index": 3,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 99
+          },
+          "type": "number"
+        },
+        {
+          "id": "4",
+          "value": 99,
+          "label": {
+            "en": "Light Threshold",
+            "de": "Helligkeitsgrenzwert"
+          },
+          "hint": {
+            "en": "Setting the illumination threshold to turn on the light. When the event triggered and the environment illumination lower then the threshold, the device will turn on the light.\n0 means turn off illumination detected function. And never turn on the light.\n1 means darkest.\n99 means brightest.\n100 means turn off illumination detected function. And always turn on the light.\n\nNotice: In none test mode, only the value in 1 to 99 will enable the illumination detected function and update the illumination value.",
+            "de": "Helligkeitsgrenzwert einstellen für 'Licht an':\nWenn das Gerät auslöst, weil die Umgebung dunkler ist als der eingestellte Helligkeitsgrenzwert, schaltet sich das Licht an.\n• 0 = Lichterkennungsfunktion ausschalten; Licht bleibt ausgeschaltet.\n• 1 = am dunkelsten\n• 99 = am hellsten\n• 100 = Lichterkennungsfunktion einschalten; Licht bleibt eingeschaltet.\nIm 'Test-Modus' aktivieren Sie die Lichterkennungsfunktion mit den Werten 1 bis 99 und aktualisieren den Helligkeitsgrenzwert."
+          },
+          "zwave": {
+            "index": 4,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 99
+          },
+          "type": "number"
+        },
+        {
+          "id": "5",
+          "value": 0,
+          "label": {
+            "en": "Operation Mode",
+            "de": "Betriebsmodus"
+          },
+          "hint": {
+            "en": "Operation mode. Using bit mask to control.\nBit0: Reserve.\nBit1: 1 means test mode, \n          0 means normal mode.\nNotice: \nThis bit only effect by the DIP Switch setting to “customer mode”, otherwise it decides by DIP Switch setting to Test or Normal Mode.\nBit2: Disable the door/window function. (1:Disable, 0:Enable)\nBit3: Setting the temperature scale.\n  0: Fahrenheit, 1:Celsius\nBit4: Disable the illumination report after event triggered. (1:Disable, 0:Enable)\nBit5: Disable the temperature report after event triggered. (1:Disable, 0:Enable)\nBit6: Reserve.\nBit7: Disable the back key release into test mode. (1:Disable, 0:Enable)\nNotice: The reserve bit is allowed any value, but no effect.",
+            "de": "Betriebsmodus. Kontrollbit verwenden"
+          },
+          "zwave": {
+            "index": 5,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "6",
+          "value": 4,
+          "label": {
+            "en": "Mult-Sensor Function Switch",
+            "de": "Multi-Sensorfunktion Switch"
+          },
+          "hint": {
+            "en": "Multisensor function switch. Using bit to control.\nBit0: Disable magnetic integrate illumination to turn ON the lighting nodes in the association group 2. (1:Disable, 0:Enable)\nBit1: Reserve.\nBit2: Reserve.\nBit3: Reserve.\nBit4: Disable delay 5 seconds to turn off the light, when door/window closed.  (1:Disable, 0:Enable)\nBit5: Disable auto turn off the light, after door/window opened to turn on the light.  (1:Disable, 0:Enable)\nNotice: If bit2 is zero, this setting is useless.\nNotice: If the configuration No.9 is zero, this setting is useless.\nBit6: Reserve.\nBit7: Reserve.\nNotice: The reserve bit is allowed any value, but no effect."
+          },
+          "zwave": {
+            "index": 6,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "7",
+          "value": 4,
+          "label": {
+            "en": "Customer Function",
+            "de": "Anwenderfunktion"
+          },
+          "hint": {
+            "en": "Customer function switch, using bit control.\nBit0: Reserve.\nBit1: Reserve.\nBit2: Reserve.\nBit3: Disable send out BASIC OFF after door closed.  (1:Disable, 0:Enable)\nBit4: Notification Type,  \n        0: Using Notification Report. \n        1: Using Sensor Binary Report.\nBit5: Disable Multi CC in auto report.  (1:Disable, 0:Enable)\nBit6: Disable to report battery state when the device triggered.  (1:Disable, 0:Enable)\nBit7: Reserve.\nNotice: The reserve bit is allowed any value, but no effect."
+          },
+          "zwave": {
+            "index": 7,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "8",
+          "value": 3,
+          "label": {
+            "en": "PIR Re-Detect Interval Time",
+            "de": "Zeitintervall für PIR Wiedererfassung"
+          },
+          "hint": {
+            "en": "In the normal mode, after the PIR motion detected, setting the re-detect time. 8 seconds per tick, default tick is 3 (24 seconds).\nSetting the suitable value to prevent received the trigger signal too frequently. Also can save the battery energy.\nNotice: If this value bigger than the configuration setting NO. 9. There is a period after the light turned off and the PIR not start detecting.\n",
+            "de": "Im Normal-Modus nach Bewegungsmeldung, legen Sie die Wiedererfassungszeit fest. 8 Sekunden pro Tick, Standardeinstellung sind 3 (24 Sekunden).\nUm unnötigen Batterieverbrauch zu vermeiden und das Signal nicht zu oft auslöst, muss ein passender Wert eingestellt sein.\nIst dieser Wert größer als der in der Konfiguration NO. 9, ergibt sich, nachdem sich das Licht ausgeschaltet hat und der PIR sich noch nicht in der Erfassungsphase befindet, eine Lücke."
+          },
+          "zwave": {
+            "index": 8,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "9",
+          "value": 4,
+          "label": {
+            "en": "Turn Off Light Time",
+            "de": "Beleuchtungszeit ausschalten"
+          },
+          "hint": {
+            "en": "After turn on the lighting, setting the delay time to turn off the lighting when the PIR motion is not detected. 8 seconds per tick, default tick is 4 (32 seconds).\n0 means never send turn off light command.",
+            "de": "Nachdem die Beleuchtung sich eingeschaltet und keine Bewegung erfasst hat, setzt die Schaltverzögerung zum Ausschalten der Beleuchtung ein. 8 Sekunden pro Tick, die Standardeinstellung sind 4 Ticks (32 Sekunden). 0 = nie einen „Licht aus-Befehl“ senden."
+          },
+          "zwave": {
+            "index": 9,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "10",
+          "value": 12,
+          "label": {
+            "en": "Auto Report Battery Time",
+            "de": "Auto-Report Batteriestandsmeldung"
+          },
+          "hint": {
+            "en": "The interval time for auto report the battery level. \n0 means turn off auto report battery.\nThe default value is 12. The tick time can setting by the configuration No.20.",
+            "de": "Intervallzeit für automatische Batteriestandsmeldung\n0 = automatische Batteriestandsmeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+          },
+          "zwave": {
+            "index": 10,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "11",
+          "value": 12,
+          "label": {
+            "en": "Auto Report Door/Window State Time",
+            "de": "Auto-Report Tür/Fenster-Status"
+          },
+          "hint": {
+            "en": "The interval time for auto report the door/window state. \n0 means turn off auto report door/window state.\nThe default value is 12. The tick time can setting by the configuration No.20.",
+            "de": "Intervallzeit für automatische Tür/-Fenster- Statusmeldung.\n0 = automatische Tür-/Fenstermeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+          },
+          "zwave": {
+            "index": 11,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "12",
+          "value": 12,
+          "label": {
+            "en": "Auto Report Illumination Time",
+            "de": "Auto-Report Helligkeitsmeldung"
+          },
+          "hint": {
+            "en": "The interval time for auto report the illumination. \n0 means turn off auto report illumination.\nThe default value is 12. The tick time can setting by the configuration No.20.",
+            "de": "Intervallzeit für automatische Helligkeitsmeldung\n0 = automatische Helligkeitsmeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+          },
+          "zwave": {
+            "index": 12,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "13",
+          "value": 12,
+          "label": {
+            "en": "Auto Report Temperature Time",
+            "de": "Auto-Report Temperaturmeldung"
+          },
+          "hint": {
+            "en": "The interval time for auto report the temperature. \n0 means turn off auto report temperature.\nThe default value is 12. The tick time can setting by the configuration No.20.",
+            "de": "Intervallzeit für automatische Temperaturmeldung 0 = automatische Temperaturmeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+          },
+          "zwave": {
+            "index": 13,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "20",
+          "value": 30,
+          "label": {
+            "en": "Auto Report Tick Interval",
+            "de": "Auto-Report Tick-Intervall"
+          },
+          "hint": {
+            "en": "The interval time for auto report each tick. Setting this configuration will effect configuration No.10, No.11, No.12 and No.13.\nCaution: Setting to 0 means turn off all auto report function.",
+            "de": "Einstellung Intervallzeit pro Tick; diese Einstellung hat Auswirkung auf die Konfigurationen Nr.10, Nr.11,\nNr.12 und Nr.13.\n0 = automatische Report-Funktion deaktivieren."
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "21",
+          "value": 1,
+          "label": {
+            "en": "Temperature Differential Report",
+            "de": "Temperaturdifferenz-Meldung"
+          },
+          "hint": {
+            "en": "The temperature differential to report.\n0 means turn off this function. \nThe unit is Fahrenheit.\nEnable this function the device will detect every minutes. \nAnd when the temperature is over 140 degree Fahrenheit, it will continue report.\nEnable this functionality will cause some issue please see the detail in the “Temperature Report” section.",
+            "de": "0 = Funktion deaktivieren.\nDie Maßeinheit ist Fahrenheit/Celsius.\nBei aktivierter Funktion, erfasst das Gerät einmal in der Minute die Temperatur. Ist die Temperatur über 60° Celsius, meldet das Gerät kontinuierlich."
+          },
+          "zwave": {
+            "index": 21,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "22",
+          "value": 0,
+          "label": {
+            "en": "Illumination Differential Report",
+            "de": "Helligkeitsdifferenz-Meldung"
+          },
+          "hint": {
+            "en": "The illumination differential to report.\n0 means turn off this function. \nThe unit is percentage.\nEnable this function the device will detect every minutes. \nEnable this functionality will cause some issue please see the detail in the “Illumination Report” section.",
+            "de": "0 = Funktion deaktivieren Die Maßeinheit ist Prozent.\nBei aktivierter Funktion, erfasst das Gerät einmal in der Minute die Helligkeit."
+          },
+          "zwave": {
+            "index": 22,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 99
+          },
+          "type": "number"
+        }
+      ],
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          13
+        ],
+        "zwaveAllianceProductId": 1131,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1131/Devolo home Control Motion.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "There are two tamper keys in the device, one is in the back side, another is in the front side.  Both of them  can add,  remove, reset or association from Z-Wave network.\nTo add into a Z-Wave network: \n1. Have Z-Wave  Controller entered inclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the inclusion mode.\n3. After add successful, the device will wake to receive the setting command from Z-Wave Controller about 20 seconds."
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "There are two tamper keys in the device, one is in the back side, another is in the front side.  Both of them  can add,  remove, reset or association from Z-Wave network.\nTo remove the device from a Z-Wave network: \n1. Have Z-Wave  Controller entered exclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the exclusion mode.\nNode ID has been excluded."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "mt2648",
+      "name": {
+        "en": "Door/Window Sensor MT2648"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_contact",
+        "alarm_tamper",
+        "measure_battery",
+        "measure_luminance",
+        "measure_temperature"
+      ],
+      "images": {
+        "large": "/drivers/mt2648/assets/images/large.png",
+        "small": "/drivers/mt2648/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "2",
+          "value": 255,
+          "label": {
+            "en": "Basic Set Level",
+            "de": "Basic Set Level"
+          },
+          "hint": {
+            "en": "Setting the BASIC command value to turn on the light. The 0xFF(-1) means turn on the light. For dimmer equipment 1 to 100 means the light strength.\n0 means turn off the light.",
+            "de": "Einstellung des BASIC command value (Kommando/Sollwert):\n0xFF(-1 ) = Licht einschalten\nDimmer 1 bis 100 = Helligkeit erhöhen\n0 = Licht ausschalten."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "4",
+          "value": 99,
+          "label": {
+            "en": "Light Threshold",
+            "de": "Helligkeitsgrenzwert"
+          },
+          "hint": {
+            "en": "Setting the illumination threshold to turn on the light. When the event triggered and the environment illumination lower then the threshold, the device will turn on the light.\n0 means turn off illumination detected function. And never turn on the light.\n1 means darkest.\n99 means brightest.\n100 means turn off illumination detected function. And always turn on the light.\n\nNotice: In none test mode, only the value in 1 to 99 will enable the illumination detected function and update the illumination value.",
+            "de": "Helligkeitsgrenzwert einstellen für 'Licht an':\nWenn das Gerät auslöst, weil die Umgebung dunkler ist als der eingestellte Helligkeitsgrenzwert, schaltet sich das Licht an.\n• 0 = Lichterkennungsfunktion ausschalten; Licht bleibt ausgeschaltet.\n• 1 = am dunkelsten\n• 99 = am hellsten\n• 100 = Lichterkennungsfunktion einschalten; Licht bleibt eingeschaltet.\nIm 'Test-Modus' aktivieren Sie die Lichterkennungsfunktion mit den Werten 1 bis 99 und aktualisieren den Helligkeitsgrenzwert."
+          },
+          "zwave": {
+            "index": 4,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 99
+          },
+          "type": "number"
+        },
+        {
+          "id": "5",
+          "value": 0,
+          "label": {
+            "en": "Operation Mode",
+            "de": "Betriebsmodus"
+          },
+          "hint": {
+            "en": "Operation mode. Using bit mask to control.\nBit0: Reserve.\nBit1: 1 means test mode, \n          0 means normal mode.\nNotice: \nThis bit only effect by the DIP Switch setting to “customer mode”, otherwise it decides by DIP Switch setting to Test or Normal Mode.\nBit2: Disable the door/window function. (1:Disable, 0:Enable)\nBit3: Setting the temperature scale.\n  0: Fahrenheit, 1:Celsius\nBit4: Disable the illumination report after event triggered. (1:Disable, 0:Enable)\nBit5: Disable the temperature report after event triggered. (1:Disable, 0:Enable)\nBit6: Reserve.\nBit7: Disable the back key release into test mode. (1:Disable, 0:Enable)\nNotice: The reserve bit is allowed any value, but no effect.",
+            "de": "Betriebsmodus. Kontrollbit verwenden"
+          },
+          "zwave": {
+            "index": 5,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "6",
+          "value": 4,
+          "label": {
+            "en": "Mult-Sensor Function Switch",
+            "de": "Multi-Sensorfunktion Switch"
+          },
+          "hint": {
+            "en": "Multisensor function switch. Using bit to control.\nBit0: Disable magnetic integrate illumination to turn ON the lighting nodes in the association group 2. (1:Disable, 0:Enable)\nBit1: Reserve.\nBit2: Reserve.\nBit3: Reserve.\nBit4: Disable delay 5 seconds to turn off the light, when door/window closed.  (1:Disable, 0:Enable)\nBit5: Disable auto turn off the light, after door/window opened to turn on the light.  (1:Disable, 0:Enable)\nNotice: If bit2 is zero, this setting is useless.\nNotice: If the configuration No.9 is zero, this setting is useless.\nBit6: Reserve.\nBit7: Reserve.\nNotice: The reserve bit is allowed any value, but no effect."
+          },
+          "zwave": {
+            "index": 6,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "7",
+          "value": 4,
+          "label": {
+            "en": "Customer Function",
+            "de": "Anwenderfunktion"
+          },
+          "hint": {
+            "en": "Customer function switch, using bit control.\nBit0: Reserve.\nBit1: Reserve.\nBit2: Reserve.\nBit3: Disable send out BASIC OFF after door closed.  (1:Disable, 0:Enable)\nBit4: Notification Type,  \n        0: Using Notification Report. \n        1: Using Sensor Binary Report.\nBit5: Disable Multi CC in auto report.  (1:Disable, 0:Enable)\nBit6: Disable to report battery state when the device triggered.  (1:Disable, 0:Enable)\nBit7: Reserve.\nNotice: The reserve bit is allowed any value, but no effect."
+          },
+          "zwave": {
+            "index": 7,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "10",
+          "value": 12,
+          "label": {
+            "en": "Auto Report Battery Time",
+            "de": "Auto-Report Batteriestandsmeldung"
+          },
+          "hint": {
+            "en": "The interval time for auto report the battery level. \n0 means turn off auto report battery.\nThe default value is 12. The tick time can setting by the configuration No.20.",
+            "de": "Intervallzeit für automatische Batteriestandsmeldung\n0 = automatische Batteriestandsmeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+          },
+          "zwave": {
+            "index": 10,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "11",
+          "value": 12,
+          "label": {
+            "en": "Auto Report Door/Window State Time",
+            "de": "Auto-Report Tür/Fenster-Status"
+          },
+          "hint": {
+            "en": "The interval time for auto report the door/window state. \n0 means turn off auto report door/window state.\nThe default value is 12. The tick time can setting by the configuration No.20.",
+            "de": "Intervallzeit für automatische Tür/-Fenster- Statusmeldung.\n0 = automatische Tür-/Fenstermeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+          },
+          "zwave": {
+            "index": 11,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "12",
+          "value": 12,
+          "label": {
+            "en": "Auto Report Illumination Time",
+            "de": "Auto-Report Helligkeitsmeldung"
+          },
+          "hint": {
+            "en": "The interval time for auto report the illumination. \n0 means turn off auto report illumination.\nThe default value is 12. The tick time can setting by the configuration No.20.",
+            "de": "Intervallzeit für automatische Helligkeitsmeldung\n0 = automatische Helligkeitsmeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+          },
+          "zwave": {
+            "index": 12,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "13",
+          "value": 12,
+          "label": {
+            "en": "Auto Report Temperature Time",
+            "de": "Auto-Report Temperaturmeldung"
+          },
+          "hint": {
+            "en": "The interval time for auto report the temperature. \n0 means turn off auto report temperature.\nThe default value is 12. The tick time can setting by the configuration No.20.",
+            "de": "Intervallzeit für automatische Temperaturmeldung 0 = automatische Temperaturmeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+          },
+          "zwave": {
+            "index": 13,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "20",
+          "value": 30,
+          "label": {
+            "en": "Auto Report Tick Interval",
+            "de": "Auto-Report Tick-Intervall"
+          },
+          "hint": {
+            "en": "The interval time for auto report each tick. Setting this configuration will effect configuration No.10, No.11, No.12 and No.13.\nCaution: Setting to 0 means turn off all auto report function.",
+            "de": "Einstellung Intervallzeit pro Tick; diese Einstellung hat Auswirkung auf die Konfigurationen Nr.10, Nr.11,\nNr.12 und Nr.13.\n0 = automatische Report-Funktion deaktivieren."
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "21",
+          "value": 1,
+          "label": {
+            "en": "Temperature Differential Report",
+            "de": "Temperaturdifferenz-Meldung"
+          },
+          "hint": {
+            "en": "The temperature differential to report.\n0 means turn off this function. \nThe unit is Fahrenheit.\nEnable this function the device will detect every minutes. \nAnd when the temperature is over 140 degree Fahrenheit, it will continue report.\nEnable this functionality will cause some issue please see the detail in the “Temperature Report” section.",
+            "de": "0 = Funktion deaktivieren.\nDie Maßeinheit ist Fahrenheit/Celsius.\nBei aktivierter Funktion, erfasst das Gerät einmal in der Minute die Temperatur. Ist die Temperatur über 60° Celsius, meldet das Gerät kontinuierlich."
+          },
+          "zwave": {
+            "index": 21,
+            "size": 1
+          },
+          "attr": {
+            "min": 1,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "22",
+          "value": 0,
+          "label": {
+            "en": "Illumination Differential Report",
+            "de": "Helligkeitsdifferenz-Meldung"
+          },
+          "hint": {
+            "en": "The illumination differential to report.\n0 means turn off this function. \nThe unit is percentage.\nEnable this function the device will detect every minutes. \nEnable this functionality will cause some issue please see the detail in the “Illumination Report” section.",
+            "de": "0 = Funktion deaktivieren Die Maßeinheit ist Prozent.\nBei aktivierter Funktion, erfasst das Gerät einmal in der Minute die Helligkeit."
+          },
+          "zwave": {
+            "index": 22,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 99
+          },
+          "type": "number"
+        }
+      ],
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          14
+        ],
+        "zwaveAllianceProductId": 1130,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1130/Devolo home Control Door-Window.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "There are two tamper keys in the device, one is in the back side, another is in the front side.  Both of them  can add,  remove, reset or association from Z-Wave network.\nTo add into a Z-Wave network: \n1. Have Z-Wave  Controller entered inclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the inclusion mode.\n3. After add successful, the device will wake to receive the setting command from Z-Wave Controller about 20 seconds."
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "There are two tamper keys in the device, one is in the back side, another is in the front side.  Both of them  can add,  remove, reset or association from Z-Wave network.\nTo remove the device from a Z-Wave network: \n1. Have Z-Wave  Controller entered exclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the exclusion mode.\nNode ID has been excluded."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "mt2649",
+      "name": {
+        "en": "Room Thermostat MT2649"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "button",
+        "measure_battery",
+        "measure_temperature",
+        "target_temperature"
+      ],
+      "images": {
+        "large": "/drivers/mt2649/assets/images/large.png",
+        "small": "/drivers/mt2649/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "1",
+          "value": 5,
+          "label": {
+            "en": "Temperature Report"
+          },
+          "hint": {
+            "en": "0,1 bis 10 °C"
+          },
+          "zwave": {
+            "index": 1,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 1,
+            "max": 100
+          },
+          "type": "number"
+        },
+        {
+          "id": "2",
+          "value": 5,
+          "label": {
+            "en": "Set-point display resolution"
+          },
+          "hint": {
+            "en": "von 0,1 bis 10 °C in Schritten von 0,1 °C"
+          },
+          "zwave": {
+            "index": 2,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 1,
+            "max": 100
+          },
+          "type": "number"
+        },
+        {
+          "id": "3",
+          "value": 12,
+          "label": {
+            "en": "Min. set-point and override limit"
+          },
+          "hint": {
+            "en": "Von min. 0 °C bis max. Sollwert/Über steuerungsgrenze"
+          },
+          "zwave": {
+            "index": 3,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 40
+          },
+          "type": "number"
+        },
+        {
+          "id": "4",
+          "value": 28,
+          "label": {
+            "en": "Max set-point and override limit"
+          },
+          "hint": {
+            "en": "Von min. Sollwert/Über steuerungsgrenze bis max. 40 °C"
+          },
+          "zwave": {
+            "index": 4,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 40
+          },
+          "type": "number"
+        },
+        {
+          "id": "5",
+          "value": 1,
+          "label": {
+            "en": "LED-Blinken (Zeitraum)"
+          },
+          "hint": {
+            "en": "0 bis 65535 s"
+          },
+          "zwave": {
+            "index": 5,
+            "size": 2,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 65535
+          },
+          "type": "number"
+        },
+        {
+          "id": "6",
+          "value": "1",
+          "label": {
+            "en": "Setpoint control function"
+          },
+          "hint": {
+            "en": "Deaktiviert/ aktiviert."
+          },
+          "zwave": {
+            "index": 6,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "7",
+          "value": "1",
+          "label": {
+            "en": "Temporarily override scheduler"
+          },
+          "hint": {
+            "en": "Deaktiviert/ aktiviert."
+          },
+          "zwave": {
+            "index": 7,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Enabled"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "8",
+          "value": "1",
+          "label": {
+            "en": "Setpoint in Thermostat_ Setpoint_Reports"
+          },
+          "hint": {
+            "en": "1 = Heating #1\n2 = Cooling #1\n10 = Auto Change- over."
+          },
+          "zwave": {
+            "index": 8,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Heating #1"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Cooling #1"
+              }
+            },
+            {
+              "id": "10",
+              "label": {
+                "en": "Auto Change- over"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "9",
+          "value": 1,
+          "label": {
+            "en": "LED-on-Time"
+          },
+          "hint": {
+            "en": "1 = 100 ms\n5 = 500 ms"
+          },
+          "zwave": {
+            "index": 9,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 1,
+            "max": 5
+          },
+          "type": "number"
+        },
+        {
+          "id": "10",
+          "value": 5,
+          "label": {
+            "en": "LED-Blinkanzahl (Dauer)"
+          },
+          "hint": {
+            "en": "0 bis 255 x blinken"
+          },
+          "zwave": {
+            "index": 10,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "11",
+          "value": "1",
+          "label": {
+            "en": "LED-Farbe"
+          },
+          "hint": {
+            "en": ""
+          },
+          "zwave": {
+            "index": 11,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Grün"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Rot"
+              }
+            }
+          ],
+          "type": "dropdown"
+        }
+      ],
+      "zwave": {
+        "manufacturerId": 2,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          32784
+        ],
+        "zwaveAllianceProductId": 1188
+      }
+    },
+    {
+      "id": "mt2650",
+      "name": {
+        "en": "Radiator Control MT2650"
+      },
+      "class": "thermostat",
+      "capabilities": [
+        "measure_battery",
+        "measure_temperature",
+        "target_temperature"
+      ],
+      "images": {
+        "large": "/drivers/mt2650/assets/images/large.png",
+        "small": "/drivers/mt2650/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 2,
+        "productTypeId": [
+          5
+        ],
+        "productId": [
+          373
+        ],
+        "zwaveAllianceProductId": 1506
+      }
+    },
+    {
+      "id": "mt2651",
+      "name": {
+        "en": "Smoke Detector MT2651"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "measure_battery",
+        "alarm_smoke"
+      ],
+      "images": {
+        "large": "/drivers/mt2651/assets/images/large.png",
+        "small": "/drivers/mt2651/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 0,
+        "productTypeId": [
+          0
+        ],
+        "productId": [
+          0
+        ],
+        "zwaveAllianceProductId": 2230,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2230/Full Manual_Home_Control_Smoke-Detector_0217_en_online.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "Put the Z-Wave™ Interface Controller into “inclusion” mode, and following its instruction to add the MT:2651 to your controller. To get in the “inclusion” mode, the distance between detector and controller is suggested to be in one meter. Press the program switch of MT:2651 for 1 second at least to be included. After setting, the LED Setting Lighting should go off, if not, please try again. (Please refer to the user manual to understand the program switch location)"
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "Put the Z-Wave™ Interface Controller into “exclusion” mode, and following its instruction to delete the MT:2651 from your controller. Press the program switch of MT:2651 for 1 second at least to be excluded.  The red LED setting light will flash continuously in Exclusion condition. (Please refer to the user manual to understand the program switch location)"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "mt2652",
+      "name": {
+        "en": "Scene Switch MT2652"
+      },
+      "class": "button",
+      "capabilities": [
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/mt2652/assets/images/large.png",
+        "small": "/drivers/mt2652/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "1",
+          "value": "1",
+          "label": {
+            "en": "Button 1 and 3 pair mode",
+            "de": "Taster 1 und 3 gekoppelt"
+          },
+          "hint": {
+            "en": "In separate mode button 1 works with group A, button 3 with groups C. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. In pair button 1/3 are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group A, double click with group C.",
+            "de": "Im entkoppelten Modus steuert Taster 1 die Gruppe A und Taster 3 die Gruppe C, im gekoppelten Modus steuern beide die Gruppen A und C, wobei Einfachklick Gruppe A und Doppelklick Gruppe C schaltet."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "seperately",
+                "de": "Taster 1 und 3 sind unabängig"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "In pair without double clicks",
+                "de": "Taster 1 und 3 steuern gemeinsam. Doppelklick wird nicht beachtet"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "In pair with double clicks",
+                "de": "Taster 1 und 3 steuern gemeinsam. Doppelklick wird beachtet"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "2",
+          "value": "1",
+          "label": {
+            "en": "Button 2 and 4 pair mode",
+            "de": "Taster 2 und 4 gekoppelt"
+          },
+          "hint": {
+            "en": "In separate mode button 2 works with control group B, button 4 with control group D. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. In pair button B/D are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B, double click with group D.",
+            "de": "Im entkoppelten Modus steuert Taster 2 die Gruppe B und Taste 4 die Gruppe D, im gekoppelten Modus steuern beide die Gruppen B und D, wobei Einfachklick Gruppe B und Doppelklick Gruppe D schaltet."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "seperately",
+                "de": "Taster 2 und 4 sind unabängig"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "In pair without double clicks",
+                "de": "Taster 2 und 4 steuern gemeinsam. Doppelklick wird nicht beachtet"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "In pair with double clicks",
+                "de": "Taster 2 und 4 steuern gemeinsam. Doppelklick wird beachtet"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "11",
+          "value": "8",
+          "label": {
+            "en": "Command to Control Group A",
+            "de": "Kommando an Steuergruppe A"
+          },
+          "hint": {
+            "en": "This parameter defines the command to be sent to devices of control group A when the related button is pressed",
+            "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe A gesendet wird."
+          },
+          "zwave": {
+            "index": 11,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "de": "Deaktiviert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch On/Off only (send Basic Set)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch All",
+                "de": "Switch All Kommando"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send Scenes",
+                "de": "Szenenaktivierung"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send Preconfigured Scenes",
+                "de": "Vorkonfigurierte Szenen werden gesendet"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Control using Home Control",
+                "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Control DoorLock",
+                "de": "Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Central Scene to Gateway",
+                "de": "Zentrale Szene im Gateway"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "12",
+          "value": "8",
+          "label": {
+            "en": "Command to Control Group B",
+            "de": "Kommando an Steuergruppe B"
+          },
+          "hint": {
+            "en": "This parameter defines the command to be sent to devices of control group B when the related button is pressed",
+            "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe B gesendet wird."
+          },
+          "zwave": {
+            "index": 12,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "de": "Deaktiviert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch On/Off only (send Basic Set)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch All",
+                "de": "Switch All Kommando"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send Scenes",
+                "de": "Szenenaktivierung"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send Preconfigured Scenes",
+                "de": "Vorkonfigurierte Szenen werden gesendet"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Control using Home Control",
+                "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Control DoorLock",
+                "de": "Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Central Scene to Gateway",
+                "de": "Zentrale Szene im Gateway"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "13",
+          "value": "8",
+          "label": {
+            "en": "Command to Control Group C",
+            "de": "Kommando an Steuergruppe C"
+          },
+          "hint": {
+            "en": "This parameter defines the command to be sent to devices of control group C when the related button is pressed",
+            "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe C gesendet wird."
+          },
+          "zwave": {
+            "index": 13,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "de": "Deaktiviert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch On/Off only (send Basic Set)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch All",
+                "de": "Switch All Kommando"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send Scenes",
+                "de": "Szenenaktivierung"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send Preconfigured Scenes",
+                "de": "Vorkonfigurierte Szenen werden gesendet"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Control using Home Control",
+                "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Control DoorLock",
+                "de": "Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Central Scene to Gateway",
+                "de": "Zentrale Szene im Gateway"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "14",
+          "value": "8",
+          "label": {
+            "en": "Command to Control Group D",
+            "de": "Kommando an Steuergruppe D"
+          },
+          "hint": {
+            "en": "This parameter defines the command to be sent to devices of control group D when the related button is pressed",
+            "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe D gesendet wird."
+          },
+          "zwave": {
+            "index": 14,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "de": "Deaktiviert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch On/Off only (send Basic Set)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch All",
+                "de": "Switch All Kommando"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send Scenes",
+                "de": "Szenenaktivierung"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send Preconfigured Scenes",
+                "de": "Vorkonfigurierte Szenen werden gesendet"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Control using Home Control",
+                "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Control DoorLock",
+                "de": "Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Central Scene to Gateway",
+                "de": "Zentrale Szene im Gateway"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "21",
+          "value": "0",
+          "label": {
+            "en": "Send the following Switch All commands",
+            "de": "Sende die folgenden 'Switch All' Kommandos"
+          },
+          "hint": {
+            "en": ""
+          },
+          "zwave": {
+            "index": 21,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Switch off only",
+                "de": "Nur alle ausschalten"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch on only",
+                "de": "Nur alle Einschalten"
+              }
+            },
+            {
+              "id": "255",
+              "label": {
+                "en": "Switch all on and off",
+                "de": "Alle einschalten und ausschalten"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "22",
+          "value": "0",
+          "label": {
+            "en": "Invert buttons",
+            "de": "Invertieren der Tastenbedeutung Hoch und Runter"
+          },
+          "hint": {
+            "en": ""
+          },
+          "zwave": {
+            "index": 22,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "No",
+                "de": "Nein"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Yes",
+                "de": "Ja"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "25",
+          "value": "0",
+          "label": {
+            "en": "Blocks wakeup even when wakeup interval is set",
+            "de": "Blockiert das Aufwecken des Gerätes selbst bei gesetztem Aufweckinterval"
+          },
+          "hint": {
+            "en": "",
+            "de": "Weckt der KFOB auf und es befindet sich kein Controller in der Nähe, wird mit erfolglosen Kommunikationsversuchen viel Batterieleistung verbraucht."
+          },
+          "zwave": {
+            "index": 25,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Block",
+                "de": "Aufwecken blockiert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "WakeUp",
+                "de": "WakeUp findet bei entsprechender Konfiguration statt."
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "30",
+          "value": "1",
+          "label": {
+            "en": "Send unsolicited Battery Report on Wake Up",
+            "de": "Sende beim Aufwecken unaufgefordert eine Batterie-Statusmeldung"
+          },
+          "hint": {
+            "en": ""
+          },
+          "zwave": {
+            "index": 30,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "No",
+                "de": "Nein"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "To same node as wake up notification",
+                "de": "An das gleiche Gerät wie die Aufweck-Meldung"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Broadcast",
+                "de": "Broadcast an alle Nachbarn"
+              }
+            }
+          ],
+          "type": "dropdown"
+        }
+      ],
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          256
+        ],
+        "productId": [
+          257
+        ],
+        "zwaveAllianceProductId": 1143,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1143/SceneSwitch_Manual.docx",
+        "learnmode": {
+          "instruction": {
+            "en": "Place your primary controller in inclusion mode by following the manufacturer's instructions, then activate inclusion on the wall controller by pressing any one of the four buttons for one second.  Inclusion mode is indicated by the red/green blinking of the LEDs until the timeout occurs after 10 seconds."
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "Re-Inclusion and Exclusion are performed by pushing button 1 in management mode.  Pushing all four buttons for 5 sec. turns the device into management mode (indicated by blinking green LED)."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "mt2653",
+      "name": {
+        "en": "Home Control Key MT2653"
+      },
+      "class": "button",
+      "capabilities": [
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/mt2653/assets/images/large.png",
+        "small": "/drivers/mt2653/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "1",
+          "value": "1",
+          "label": {
+            "en": "Button 1 and 3 pair mode"
+          },
+          "hint": {
+            "en": "In separate mode button 1 works with group A, button 3 with groups C. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. In pair button 1/3 are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group A, double click with group C."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "seperately"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "In pair without double clicks"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "In pair with double clicks"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "11",
+          "value": "8",
+          "label": {
+            "en": "Command to Control Group A"
+          },
+          "hint": {
+            "en": "This parameter defines the command to be sent to devices of control group A when the related button is pressed"
+          },
+          "zwave": {
+            "index": 11,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch On/Off only (send Basic Set)"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch All"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send Scenes"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send Preconfigured Scenes"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Central Scene to Gateway"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "12",
+          "value": "8",
+          "label": {
+            "en": "Command to Control Group B"
+          },
+          "hint": {
+            "en": "This parameter defines the command to be sent to devices of control group B when the related button is pressed"
+          },
+          "zwave": {
+            "index": 12,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch On/Off only (send Basic Set)"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch All"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send Scenes"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send Preconfigured Scenes"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Central Scene to Gateway "
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "13",
+          "value": "8",
+          "label": {
+            "en": "Command to Control Group C"
+          },
+          "hint": {
+            "en": "This parameter defines the command to be sent to devices of control group C when the related button is pressed"
+          },
+          "zwave": {
+            "index": 13,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch On/Off only (send Basic Set)"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch All"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send Scenes"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send Preconfigured Scenes"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Central Scene to Gateway "
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "14",
+          "value": "8",
+          "label": {
+            "en": "Command to Control Group D"
+          },
+          "hint": {
+            "en": "This parameter defines the command to be sent to devices of control group D when the related button is pressed"
+          },
+          "zwave": {
+            "index": 14,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch On/Off only (send Basic Set)"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch All"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send Scenes"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send Preconfigured Scenes"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Central Scene to Gateway "
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "2",
+          "value": "1",
+          "label": {
+            "en": "Button 2 and 4 pair mode "
+          },
+          "hint": {
+            "en": "In separate mode button 2 works with control group B, button 4 with control group D. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. In pair button B/D are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B, double click with group D."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "seperately"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "In pair without double clicks"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "In pair with double clicks"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "21",
+          "value": "1",
+          "label": {
+            "en": "Send the following Switch All commands "
+          },
+          "hint": {
+            "en": ""
+          },
+          "zwave": {
+            "index": 21,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "-1",
+              "label": {
+                "en": "Switch all on and off"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch off only"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch on only"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "22",
+          "value": 0,
+          "label": {
+            "en": "Invert buttons"
+          },
+          "hint": {
+            "en": ""
+          },
+          "zwave": {
+            "index": 22,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 0
+          },
+          "type": "number"
+        },
+        {
+          "id": "25",
+          "value": 1,
+          "label": {
+            "en": "Blocks wakeup even when wakeup interval is set"
+          },
+          "hint": {
+            "en": ""
+          },
+          "zwave": {
+            "index": 25,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 0
+          },
+          "type": "number"
+        },
+        {
+          "id": "30",
+          "value": "0",
+          "label": {
+            "en": "Send unsolicited Battery Report on Wake Up"
+          },
+          "hint": {
+            "en": ""
+          },
+          "zwave": {
+            "index": 30,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "No"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "To same node as wake up notification"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Broadcast"
+              }
+            }
+          ],
+          "type": "dropdown"
+        }
+      ],
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          1
+        ],
+        "productId": [
+          769
+        ],
+        "zwaveAllianceProductId": 2134,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2134/MT2653_en.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "When in factory default push Button 3 (secure) or Button 4 (normal) for one second to enter inclusion mode. The inclusion mode is indicated by a blinking green LED. From second device on you need to enter management mode  push all four buttons together for one second - green led blinks slowly), hit button 3 ( enter primary controller functions - green led blinks faster) and then button 1 (secure) or button 2 (normal)."
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "Enter management mode  by push all four buttons together for one second - green led blinks slowly), hit button 3 ( enter primary controller functions - green led blinks faster) and then button 3 again.\r\n\r\n  "
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "mt2755",
+      "name": {
+        "en": "Humidity Sensor MT2755"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_tamper",
+        "measure_battery",
+        "measure_humidity",
+        "measure_temperature"
+      ],
+      "images": {
+        "large": "/drivers/mt2755/assets/images/large.png",
+        "small": "/drivers/mt2755/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "5",
+          "value": 33,
+          "label": {
+            "en": "Operation Mode",
+            "de": "Betriebsmodus"
+          },
+          "hint": {
+            "en": "Operation mode. Using bit to control."
+          },
+          "zwave": {
+            "index": 5,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "6",
+          "value": 64,
+          "label": {
+            "en": "Multi-Sensorfunktion Schalter"
+          },
+          "hint": {
+            "en": ""
+          },
+          "zwave": {
+            "index": 6,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "7",
+          "value": 0,
+          "label": {
+            "en": "Customer Function",
+            "de": "Anwenderfunktion"
+          },
+          "hint": {
+            "en": "Customer function switch, using bit control."
+          },
+          "zwave": {
+            "index": 7,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "10",
+          "value": 12,
+          "label": {
+            "en": "Auto Report Battery Time",
+            "de": "Auto-Report Batteriestandsmeldung"
+          },
+          "hint": {
+            "en": "The interval time for auto report the battery level. \r\n0 means turn off auto report.\r\nThe default value is 12. The tick time can setting by the configuration No.20.",
+            "de": "Intervallzeit für automatische Batteriestandsmeldung\n0= automatische Batteriestandsmeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+          },
+          "zwave": {
+            "index": 10,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "13",
+          "value": 12,
+          "label": {
+            "en": "Auto Report Temperature Time",
+            "de": "Auto-Report Temperaturmeldung"
+          },
+          "hint": {
+            "en": "The interval time for auto report the temperature. \r\n0 means turn off auto report.\r\nThe default value is 12. The tick time can setting by the configuration No.20.",
+            "de": "Intervallzeit für automatische Temperaturmeldung\n0= automatische Temperaturmeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+          },
+          "zwave": {
+            "index": 13,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "14",
+          "value": 12,
+          "label": {
+            "en": "Auto Report Humidity Time",
+            "de": "Auto-Report Feuchtigkeitsmeldung"
+          },
+          "hint": {
+            "en": "The interval time for auto report the humidity. \r\n0 means turn off auto report.\r\nThe default value is 12. The tick time can setting by the configuration No.20.",
+            "de": "Intervallzeit für automatische Feuchtigkeitsmeldung\n0= automatische Feuchtigkeitsmeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+          },
+          "zwave": {
+            "index": 14,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "20",
+          "value": 30,
+          "label": {
+            "en": "Auto Report Tick Interval",
+            "de": "Auto-Report Tick-Intervall"
+          },
+          "hint": {
+            "en": "The interval time for auto report each tick.\r\nSetting this configuration will effect configuration No.10, No.13, \r\nNo.14.Units of one minute.\r\nCaution 1:Setting to 0 means turn off all auto report function.\r\nCaution 2:The value is unsigned byte",
+            "de": "Einstellung Intervallzeit pro Tick; diese Einstellung hat Auswirkung auf die Konfigurationen Nr.10, Nr.13, Nr.14 und Nr.15.\nHinweis 1: 0 = automatische Report-Funktion deaktivieren.\nHinweis 2:\nWert=unsigniertes Byte, Bereich von 0x00 ~ 0xFF."
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "21",
+          "value": 1,
+          "label": {
+            "en": "Temperature Differential Report",
+            "de": "Temperaturdifferenz-Meldung"
+          },
+          "hint": {
+            "en": "The temperature differential to report.\r\n0 means turn off this function. \r\nThe unit is Fahrenheit.\r\nEnable this function the device will detect every 10 seconds. \r\nAnd when the temperature is over 140 degree Fahrenheit, it will continue report.",
+            "de": "Temperaturdifferenz-Meldung 0 = Funktion deaktivieren.\nDie Maßeinheit ist Fahrenheit/Celsius.\nBei aktivierter Funktion, erfasst das Gerät alle 10 Sekunden die Temperatur. Ist die Temperatur über 60° Celsius, meldet das Gerät weiter.\nIst die Funktion aktiv, beachten Sie die Hinweise im Abschnitt „Temperaturmeldung“."
+          },
+          "zwave": {
+            "index": 21,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "23",
+          "value": 5,
+          "label": {
+            "en": "Humidity Differential Report",
+            "de": "Feuchtigkeitsdifferenz-Meldung"
+          },
+          "hint": {
+            "en": "The humidity differential to report.\r\n0 means turn off this function. \r\nThe unit is percentage.\r\nEnable this function the device will detect every 10 seconds.",
+            "de": "Feuchtigkeitsdifferenz-Meldung\n0 = Funktion deaktivieren\nDie Maßeinheit ist Prozent.\nBei aktivierter Funktion, erfasst das Gerät alle 10 Sekunden die Feuchtigkeit."
+          },
+          "zwave": {
+            "index": 23,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 60
+          },
+          "type": "number"
+        }
+      ],
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          32
+        ],
+        "zwaveAllianceProductId": 2226,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2226/MT02756_MT02755_Manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "1. Have Z-Wave™  Controller entered inclusion mode.\r\n2. Pressing the tamper key three times within 1.5 \r\nseconds to enter the inclusion mode.\r\n3. After add successful, the device will wake to \r\nreceive the setting command from Z-Wave™ \r\nController about 20 seconds.\r\n"
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "1. Have Z-Wave™  Controller entered exclusion mode.\r\n2. Pressing tamper key three times within 1.5 seconds\r\nto enter the exclusion mode.\r\nNode ID has been excluded.\r\n"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "mt2756",
+      "name": {
+        "en": "Flood Sensor MT2756"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_tamper",
+        "alarm_water",
+        "measure_battery"
+      ],
+      "images": {
+        "large": "/drivers/mt2756/assets/images/large.png",
+        "small": "/drivers/mt2756/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "1",
+          "value": 0,
+          "label": {
+            "en": "Basic Set OFF Level"
+          },
+          "hint": {
+            "en": "Setting the BASIC command value.\r\nWhen the flood trigger off(0x00), send the BASIC CC to the group 2."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "2",
+          "value": 255,
+          "label": {
+            "en": "Basic Set ON Level"
+          },
+          "hint": {
+            "en": "Setting the BASIC command value.\r\nWhen the flood trigger on(0xFF), send the BASIC CC to the group 2."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "5",
+          "value": 0,
+          "label": {
+            "en": "Operation Mode"
+          },
+          "hint": {
+            "en": "Operation mode. Using bit to control."
+          },
+          "zwave": {
+            "index": 5,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "7",
+          "value": 0,
+          "label": {
+            "en": "Customer Function"
+          },
+          "hint": {
+            "en": "Customer function switch, using bit control.\n8: Disable send out BASIC OFF after the flood event cleared.(1:Disable, 0:Enable)\n16: Notification Type,0:Using Notification Report.1:Using Sensor Binary Report.\n32: Disable Multi CC in auto report.(1:Disable,0:Enable)\n64: Disable to report battery state  when the device triggered. (1:Disable,  0:Enable)"
+          },
+          "zwave": {
+            "index": 7,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "10",
+          "value": 12,
+          "label": {
+            "en": "Auto Report Battery Time"
+          },
+          "hint": {
+            "en": "The interval time for auto report the battery level. \r\n0 means turn off auto report.\r\nThe default value is 12. The tick time can setting by the configuration No.20."
+          },
+          "zwave": {
+            "index": 10,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "15",
+          "value": 12,
+          "label": {
+            "en": "Auto Report Flood Time"
+          },
+          "hint": {
+            "en": "The interval time for auto report the flood state. \r\n0 means turn off auto report.\r\nThe default value is 12. The tick time can setting by the configuration No.20."
+          },
+          "zwave": {
+            "index": 15,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 127
+          },
+          "type": "number"
+        },
+        {
+          "id": "20",
+          "value": 30,
+          "label": {
+            "en": "Auto Report Tick Interval"
+          },
+          "hint": {
+            "en": "The interval time for auto report each tick.\r\nSetting this configuration will effect configuration No.10, No.13, \r\nNo.14.Units of one minute.\r\nCaution 1:Setting to 0 means turn off all auto report function.\r\nCaution 2:The value is unsigned byte"
+          },
+          "zwave": {
+            "index": 20,
+            "size": 1
+          },
+          "attr": {
+            "min": -128,
+            "max": 127
+          },
+          "type": "number"
+        }
+      ],
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          33
+        ],
+        "zwaveAllianceProductId": 2227,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2227/MT02756_MT02755_Manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "1. Have Z-Wave™  Controller entered inclusion mode.\r\n2. Pressing the tamper key three times within 1.5 \r\nseconds to enter the inclusion mode.\r\n3. After add successful, the device will wake to \r\nreceive the setting command from Z-Wave™ \r\nController about 20 seconds.\r\n"
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "1. Have Z-Wave™  Controller entered exclusion mode.\r\n2. Pressing tamper key three times within 1.5 seconds\r\nto enter the exclusion mode.\r\nNode ID has been excluded.\r\n"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "mt2758",
+      "name": {
+        "en": "Siren Indoor MT2758"
+      },
+      "class": "homealarm",
+      "capabilities": [
+        "alarm_tamper",
+        "measure_battery",
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/mt2758/assets/images/large.png",
+        "small": "/drivers/mt2758/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "7",
+          "value": 8,
+          "label": {
+            "en": "Customer Function",
+            "de": "Kundenspezifische Funktion"
+          },
+          "hint": {
+            "en": "Customer function switch, using bit control.",
+            "de": "Kundenspezifischer Schalter, unter Verwendung der Bitsteuerung"
+          },
+          "zwave": {
+            "index": 7,
+            "size": 1,
+            "signed": false
+          },
+          "attr": {
+            "min": 0,
+            "max": 255
+          },
+          "type": "number"
+        },
+        {
+          "id": "29",
+          "value": "0",
+          "label": {
+            "en": "Disable Alarm",
+            "de": "Alarm deaktivieren"
+          },
+          "hint": {
+            "en": "Disable the alarm function.\r\n1: Disable Alarm, 0: Enable Alarm.\r\nCaution: After the power up, this configuration always be 0.",
+            "de": "Alarmfunktion deaktivieren.\n1: Alarm deaktivieren, 0: Alarm aktivieren\nAchtung: Nach dem Einschalten ist dieser Wert immer 0."
+          },
+          "zwave": {
+            "index": 29,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Alarm enabled"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Alarm disabled"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "31",
+          "value": 6,
+          "label": {
+            "en": "Alarm Duration",
+            "de": "Dauer des Alarmes"
+          },
+          "hint": {
+            "en": "Play alarm sound duration, 1 tick is 30 seconds. Default is 3 minutes, maximum is 63.5 minutes 0: means never auto stop.",
+            "de": "Dauer des Alarmtones, 1 Tick sind 30 Sekunden. Die Standardeinstellung beträgt 3 Minuten, die Maximaleinstellung liegt bei 63,5 Minuten\n0: Bedeutet niemals automatisch beenden."
+          },
+          "zwave": {
+            "index": 31,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 127
+          },
+          "type": "number"
+        }
+      ],
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          4
+        ],
+        "productId": [
+          10
+        ],
+        "zwaveAllianceProductId": 2308,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2308/MT02758_manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "1. Have Z-Wave™ Controller entered inclusion mode.\r\n2. Pressing tamper key three times within 1.5 seconds\r\nto enter the inclusion mode.\r\n3. After add successful, the LED will light ON 1 second"
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "1. Have Z-Wave™ Controller entered exclusion mode.\r\n2. Pressing tamper key three times within 1.5 seconds to enter the exclusion mode.\r\nNode ID has been excluded."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
+      }
+    },
+    {
+      "id": "mt2792",
+      "name": {
+        "en": "Metering Plug MT2792"
+      },
+      "class": "socket",
+      "capabilities": [
+        "measure_power",
+        "meter_power",
+        "onoff"
+      ],
+      "images": {
+        "large": "/drivers/mt2792/assets/images/large.png",
+        "small": "/drivers/mt2792/assets/images/small.png"
+      },
+      "settings": [
+        {
+          "id": "1",
+          "value": 720,
+          "label": {
+            "en": "Watt Meter Report Period"
+          },
+          "hint": {
+            "en": "If 1 hour is set (target value =720), the Home Control Smart Metering Plug reports its power consumption at the current time every hour to the Node ID of Group 1. The maximum reporting period is 45 hours\r\n(5s*32767/3600=45hr).\r\n"
+          },
+          "zwave": {
+            "index": 1,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 32767
+          },
+          "type": "number"
+        },
+        {
+          "id": "2",
+          "value": 6,
+          "label": {
+            "en": "KWh Report Period"
+          },
+          "hint": {
+            "en": "If 1 hour is set (target value =6), the Home Control Smart Metering Plug reports its accumulated power consumption every hour to the Node ID of Group 1. The maximum reporting period is\r\n227.55 days (10s*32767/1440=227.55 days).\r\n\r\n"
+          },
+          "zwave": {
+            "index": 2,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 32767
+          },
+          "type": "number"
+        },
+        {
+          "id": "3",
+          "value": 1300,
+          "label": {
+            "en": "Threshold of current for Load caution "
+          },
+          "hint": {
+            "en": "If the current load exceeds the defined value, the Home Control Smart Metering Plug sends a meter message to the Node ID of Group 1. \r\n"
+          },
+          "zwave": {
+            "index": 3,
+            "size": 2
+          },
+          "attr": {
+            "min": 10,
+            "max": 1300
+          },
+          "type": "number"
+        },
+        {
+          "id": "4",
+          "value": 10000,
+          "label": {
+            "en": "Threshold of KWh for Load caution"
+          },
+          "hint": {
+            "en": "If the kW load exceeds the defined value (default value: 10,000, for an elevated accumulated power consumption), the Home Control Smart Metering Plug sends a meter message to the Node ID 1.\r\n"
+          },
+          "zwave": {
+            "index": 4,
+            "size": 2
+          },
+          "attr": {
+            "min": 1,
+            "max": 10000
+          },
+          "type": "number"
+        },
+        {
+          "id": "5",
+          "value": "1",
+          "label": {
+            "en": "Restore switch state mode "
+          },
+          "hint": {
+            "en": "If the Home Control Smart Metering Plug is disconnected from the mains power supply and then reconnected to the mains power supply, depending on the configuration, it will trigger the Switch OFF, set the Last Switch State or set the Switch ON. The default setting is always the last switch state.\r\n\r\n"
+          },
+          "zwave": {
+            "index": 5,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Switch off"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Last switch state"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch on"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "6",
+          "value": 1,
+          "label": {
+            "en": "Mode of Switch OFF function "
+          },
+          "hint": {
+            "en": "If Switch ON/OFF is set to 0, both the Switch OFF command and the ON/OFF button are disabled. The default setting is the enable switching.\r\n"
+          },
+          "zwave": {
+            "index": 6,
+            "size": 1
+          },
+          "attr": {
+            "min": 0,
+            "max": 0
+          },
+          "type": "number"
+        },
+        {
+          "id": "7",
+          "value": "1",
+          "label": {
+            "en": "LED indication mode"
+          },
+          "hint": {
+            "en": "1 Display device status\r\nWhen the Home Control Smart Metering Plug is switched on, the LED is on; when the Home Control Smart Metering Plug is switched off, the LED is off. In the default setting, the device status is displayed.\r\n\r\n2 Show nighttime mode:\r\nWhen the Home Control Smart Metering Plug is switched on, the LED is off; when the Home Control Smart Metering Plug is switched off, the LED is on.\r\n\r\n3 One-flash mode:\r\nIf the device status changes, the LED flashes briefly (1 sec.) and then goes out.\r\n\r\n"
+          },
+          "zwave": {
+            "index": 7,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "1",
+              "label": {
+                "en": "Show switch state"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Show night mode"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "One flash mode"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "8",
+          "value": 0,
+          "label": {
+            "en": "Auto off timer "
+          },
+          "hint": {
+            "en": "If the Home Control Smart Metering Plug switches to ON, the auto-off timer starts counting down. After the timer is set to zero, the device shuts off automatically. If the auto-off timer function is set to 0, it is disabled.\r\n\r\n"
+          },
+          "zwave": {
+            "index": 8,
+            "size": 2
+          },
+          "attr": {
+            "min": 0,
+            "max": 0
+          },
+          "type": "number"
+        },
+        {
+          "id": "9",
+          "value": "0",
+          "label": {
+            "en": "RF off command mode "
+          },
+          "hint": {
+            "en": "If the command Switch OFF BASIC_SET 、BINARY_SWITCH_SET 、SWITCH_ALL_OFF is received, this can be interpreted in four different ways:\r\n0. Switch OFF:\r\nThe Home Control Smart Metering Plug switches itself off (default setting).\r\n\r\n1. Ignore:\r\nThe command Switch OFF is ignored.\r\n\r\n2. Switch device:\r\nThe Home Control Smart Metering Plug switches to the opposite state.\r\n\r\n3. Switch ON:\r\nThe Home Control Smart Metering Plug switches itself on.\r\n"
+          },
+          "zwave": {
+            "index": 9,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Switch off"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Ignore"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch toggle"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch on "
+              }
+            }
+          ],
+          "type": "dropdown"
+        }
+      ],
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          0
+        ],
+        "productId": [
+          0
+        ],
+        "zwaveAllianceProductId": 2057,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2057/Home_Control_Schalt_Messsteckdose_2.0_2016_11_02_eng.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "The Home Control Smart Metering Plug can be included using two different procedures:\r\n\r\nVariant A: Auto Inclusion with the control unit\r\n1. In the Z-Wave-compatible control unit, start the procedure for adding a new device automatically.\r\n2. Plug the Home Control Smart Metering Plug into an available power socket. The Auto Inclusion is run.\r\nDuring the 2-minute timeout of the Auto Inclusion, Node Information Frames are sent within a few seconds. In the auto inclusion, it is not necessary to press the ON/OFF button.\r\n\r\nVariant B: Manual Inclusion with the control unit\r\nIf the time frame (2 minutes) of the Auto Inclusion procedure is exceeded, you can also include the Home Control Smart Metering Plug with the control unit manually.\r\n1. In the Z-Wave -compatible control unit, start the procedure for adding a new device (inclusion).\r\n2. Press the button of the connected Smart Metering Plug 3x within 1.2 seconds to start the inclusion process with the Z-Wave-compatible control unit."
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "1. Put the Z-Wave® controller in Exclusion mode.\r\n2. Press the ON/OFF button 3x within 1.2 seconds to put the device into Exclusion mode.\r\n(indicated by white LED: 0.5 sec. ON, 0.5 sec. OFF)\r\n3. Node ID is now removed. \r\n(After the removal, the device starts again with Auto Inclusion mode.)"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "As the default, the node with the ID 1 is entered in this group. This corresponds to the controller ID. For this association group 1, the Home Control Smart Metering Plug reports the status of the following command classes:\r\nSWITCH_BINARY_REPORT\r\nMETER_REPORT\r\nALARM_REPORT"
+            }
+          }
+        }
+      }
+    }
+  ]
+}

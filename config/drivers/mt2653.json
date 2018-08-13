@@ -1,0 +1,485 @@
+{
+    "id": "mt2653",
+    "name": {
+      "en": "Home Control Key MT2653"
+    },
+    "class": "button",
+    "capabilities": [
+      "measure_battery"
+    ],
+    "images": {
+      "large": "/drivers/mt2653/assets/images/large.png",
+      "small": "/drivers/mt2653/assets/images/small.png"
+    },
+    "settings": [
+      {
+        "id": "1",
+        "value": "1",
+        "label": {
+          "en": "Button 1 and 3 pair mode"
+        },
+        "hint": {
+          "en": "In separate mode button 1 works with group A, button 3 with groups C. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. In pair button 1/3 are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group A, double click with group C."
+        },
+        "zwave": {
+          "index": 1,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "seperately"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "In pair without double clicks"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "In pair with double clicks"
+            }
+          }
+        ],
+        "type": "dropdown"
+      },
+      {
+        "id": "11",
+        "value": "8",
+        "label": {
+          "en": "Command to Control Group A"
+        },
+        "hint": {
+          "en": "This parameter defines the command to be sent to devices of control group A when the related button is pressed"
+        },
+        "zwave": {
+          "index": 11,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Disabled"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Switch On/Off only (send Basic Set)"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Switch All"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Send Scenes"
+            }
+          },
+          {
+            "id": "5",
+            "label": {
+              "en": "Send Preconfigured Scenes"
+            }
+          },
+          {
+            "id": "7",
+            "label": {
+              "en": "Control DoorLock"
+            }
+          },
+          {
+            "id": "8",
+            "label": {
+              "en": "Central Scene to Gateway"
+            }
+          }
+        ],
+        "type": "dropdown"
+      },
+      {
+        "id": "12",
+        "value": "8",
+        "label": {
+          "en": "Command to Control Group B"
+        },
+        "hint": {
+          "en": "This parameter defines the command to be sent to devices of control group B when the related button is pressed"
+        },
+        "zwave": {
+          "index": 12,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Disabled"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Switch On/Off only (send Basic Set)"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Switch All"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Send Scenes"
+            }
+          },
+          {
+            "id": "5",
+            "label": {
+              "en": "Send Preconfigured Scenes"
+            }
+          },
+          {
+            "id": "7",
+            "label": {
+              "en": "Control DoorLock"
+            }
+          },
+          {
+            "id": "8",
+            "label": {
+              "en": "Central Scene to Gateway "
+            }
+          }
+        ],
+        "type": "dropdown"
+      },
+      {
+        "id": "13",
+        "value": "8",
+        "label": {
+          "en": "Command to Control Group C"
+        },
+        "hint": {
+          "en": "This parameter defines the command to be sent to devices of control group C when the related button is pressed"
+        },
+        "zwave": {
+          "index": 13,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Disabled"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Switch On/Off only (send Basic Set)"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Switch All"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Send Scenes"
+            }
+          },
+          {
+            "id": "5",
+            "label": {
+              "en": "Send Preconfigured Scenes"
+            }
+          },
+          {
+            "id": "7",
+            "label": {
+              "en": "Control DoorLock"
+            }
+          },
+          {
+            "id": "8",
+            "label": {
+              "en": "Central Scene to Gateway "
+            }
+          }
+        ],
+        "type": "dropdown"
+      },
+      {
+        "id": "14",
+        "value": "8",
+        "label": {
+          "en": "Command to Control Group D"
+        },
+        "hint": {
+          "en": "This parameter defines the command to be sent to devices of control group D when the related button is pressed"
+        },
+        "zwave": {
+          "index": 14,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "Disabled"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Switch On/Off only (send Basic Set)"
+            }
+          },
+          {
+            "id": "3",
+            "label": {
+              "en": "Switch All"
+            }
+          },
+          {
+            "id": "4",
+            "label": {
+              "en": "Send Scenes"
+            }
+          },
+          {
+            "id": "5",
+            "label": {
+              "en": "Send Preconfigured Scenes"
+            }
+          },
+          {
+            "id": "7",
+            "label": {
+              "en": "Control DoorLock"
+            }
+          },
+          {
+            "id": "8",
+            "label": {
+              "en": "Central Scene to Gateway "
+            }
+          }
+        ],
+        "type": "dropdown"
+      },
+      {
+        "id": "2",
+        "value": "1",
+        "label": {
+          "en": "Button 2 and 4 pair mode "
+        },
+        "hint": {
+          "en": "In separate mode button 2 works with control group B, button 4 with control group D. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. In pair button B/D are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B, double click with group D."
+        },
+        "zwave": {
+          "index": 2,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "seperately"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "In pair without double clicks"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "In pair with double clicks"
+            }
+          }
+        ],
+        "type": "dropdown"
+      },
+      {
+        "id": "21",
+        "value": "1",
+        "label": {
+          "en": "Send the following Switch All commands "
+        },
+        "hint": {
+          "en": ""
+        },
+        "zwave": {
+          "index": 21,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "-1",
+            "label": {
+              "en": "Switch all on and off"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "Switch off only"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Switch on only"
+            }
+          }
+        ],
+        "type": "dropdown"
+      },
+      {
+        "id": "22",
+        "value": 0,
+        "label": {
+          "en": "Invert buttons"
+        },
+        "hint": {
+          "en": ""
+        },
+        "zwave": {
+          "index": 22,
+          "size": 1
+        },
+        "attr": {
+          "min": 0,
+          "max": 0
+        },
+        "type": "number"
+      },
+      {
+        "id": "25",
+        "value": 1,
+        "label": {
+          "en": "Blocks wakeup even when wakeup interval is set"
+        },
+        "hint": {
+          "en": ""
+        },
+        "zwave": {
+          "index": 25,
+          "size": 1
+        },
+        "attr": {
+          "min": 0,
+          "max": 0
+        },
+        "type": "number"
+      },
+      {
+        "id": "30",
+        "value": "0",
+        "label": {
+          "en": "Send unsolicited Battery Report on Wake Up"
+        },
+        "hint": {
+          "en": ""
+        },
+        "zwave": {
+          "index": 30,
+          "size": 1
+        },
+        "values": [
+          {
+            "id": "0",
+            "label": {
+              "en": "No"
+            }
+          },
+          {
+            "id": "1",
+            "label": {
+              "en": "To same node as wake up notification"
+            }
+          },
+          {
+            "id": "2",
+            "label": {
+              "en": "Broadcast"
+            }
+          }
+        ],
+        "type": "dropdown"
+      }
+    ],
+    "zwave": {
+      "manufacturerId": 373,
+      "productTypeId": [
+        1
+      ],
+      "productId": [
+        769
+      ],
+      "zwaveAllianceProductId": 2134,
+      "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2134/MT2653_en.pdf",
+      "learnmode": {
+        "instruction": {
+          "en": "When in factory default push Button 3 (secure) or Button 4 (normal) for one second to enter inclusion mode. The inclusion mode is indicated by a blinking green LED. From second device on you need to enter management mode  push all four buttons together for one second - green led blinks slowly), hit button 3 ( enter primary controller functions - green led blinks faster) and then button 1 (secure) or button 2 (normal)."
+        }
+      },
+      "unlearnmode": {
+        "instruction": {
+          "en": "Enter management mode  by push all four buttons together for one second - green led blinks slowly), hit button 3 ( enter primary controller functions - green led blinks faster) and then button 3 again.\r\n\r\n  "
+        }
+      },
+      "associationGroups": [
+        1
+      ],
+      "associationGroupsOptions": {
+        "1": {
+          "hint": {
+            "en": "Z-Wave Plus Lifeline"
+          }
+        }
+      }
+    }
+  }

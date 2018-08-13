@@ -1,0 +1,46 @@
+{
+    "id": "mt2651",
+    "name": {
+      "en": "Smoke Detector MT2651"
+    },
+    "class": "sensor",
+    "capabilities": [
+      "measure_battery",
+      "alarm_smoke"
+    ],
+    "images": {
+      "large": "/drivers/mt2651/assets/images/large.png",
+      "small": "/drivers/mt2651/assets/images/small.png"
+    },
+    "zwave": {
+      "manufacturerId": 0,
+      "productTypeId": [
+        0
+      ],
+      "productId": [
+        0
+      ],
+      "zwaveAllianceProductId": 2230,
+      "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2230/Full Manual_Home_Control_Smoke-Detector_0217_en_online.pdf",
+      "learnmode": {
+        "instruction": {
+          "en": "Put the Z-Wave™ Interface Controller into “inclusion” mode, and following its instruction to add the MT:2651 to your controller. To get in the “inclusion” mode, the distance between detector and controller is suggested to be in one meter. Press the program switch of MT:2651 for 1 second at least to be included. After setting, the LED Setting Lighting should go off, if not, please try again. (Please refer to the user manual to understand the program switch location)"
+        }
+      },
+      "unlearnmode": {
+        "instruction": {
+          "en": "Put the Z-Wave™ Interface Controller into “exclusion” mode, and following its instruction to delete the MT:2651 from your controller. Press the program switch of MT:2651 for 1 second at least to be excluded.  The red LED setting light will flash continuously in Exclusion condition. (Please refer to the user manual to understand the program switch location)"
+        }
+      },
+      "associationGroups": [
+        1
+      ],
+      "associationGroupsOptions": {
+        "1": {
+          "hint": {
+            "en": "Z-Wave Plus Lifeline"
+          }
+        }
+      }
+    }
+  }
