@@ -14,8 +14,8 @@ class MyDevice extends DevoloDevice {
     async onMeshInit() {
 
         super.onMeshInit();
-        this.enableDebug();
-        this.printNode();
+        //this.enableDebug();
+        //this.printNode();
 
         this.registerCapability('measure_battery', 'BATTERY', {
             getOpts: {
@@ -67,9 +67,6 @@ class MyDevice extends DevoloDevice {
         .register();
 
         this.registerReportListener('CENTRAL_SCENE', 'CENTRAL_SCENE_NOTIFICATION', (rawReport, parsedReport) => {
-
-            this.log("Button: ", rawReport);
-
             if (rawReport.hasOwnProperty('Properties1') &&
             rawReport.Properties1.hasOwnProperty('Key Attributes') &&
             rawReport.hasOwnProperty('Scene Number') &&

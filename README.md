@@ -30,7 +30,7 @@ Scene Switch MT2652
 - holding button for 1 second blocks the switch for 60 seconds
 
 Home Control Key MT2653
-- implemention needed
+- holding button for 1 second blocks the key for 60 seconds
 
 Flood Sensor MT2756
 - icon missing
