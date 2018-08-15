@@ -15,6 +15,7 @@ class MyDevice extends DevoloDevice {
 
         super.onMeshInit();
         //this.enableDebug();
+        //this.printNode();
 
         this.registerCapability('alarm_tamper', 'SENSOR_BINARY');
         

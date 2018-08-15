@@ -1,0 +1,28 @@
+[
+{  
+   "id":"mt2758_turned_siren_on",
+   "title":{  
+      "en":"The siren turned on"
+   },
+   "args":[  
+      {  
+         "name":"device",
+         "type":"device",
+         "filter":"driver_id=mt2758"
+      }
+   ]
+},
+{  
+   "id":"mt2758_turned_siren_off",
+   "title":{  
+      "en":"The siren turned off"
+   },
+   "args":[  
+      {  
+         "name":"device",
+         "type":"device",
+         "filter":"driver_id=mt2758"
+      }
+   ]
+}
+]

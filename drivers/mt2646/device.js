@@ -15,7 +15,7 @@ class MyDevice extends DevoloDevice {
         
         super.onMeshInit();
 
-        this.enableDebug();
+        //this.enableDebug();
         //this.printNode();
 
         this.registerCapability('onoff', 'SWITCH_BINARY');

@@ -6,7 +6,6 @@
     "class": "homealarm",
     "capabilities": [
       "alarm_tamper",
-      "measure_battery",
       "onoff"
     ],
     "images": {
@@ -69,7 +68,7 @@
       },      
       {
         "id": "31",
-        "value": 6,
+        "value": 1, 
         "label": {
           "en": "Alarm Duration",
           "de": "Dauer des Alarmes"

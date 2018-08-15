@@ -14,8 +14,8 @@ class MyDevice extends DevoloDevice {
     async onMeshInit() {
 
         super.onMeshInit();
-        this.enableDebug();
-        this.printNode();
+        //this.enableDebug();
+        //this.printNode();
 
         this.registerCapability('measure_battery', 'BATTERY', {
             getOpts: {

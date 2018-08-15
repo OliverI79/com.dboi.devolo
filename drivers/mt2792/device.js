@@ -1,6 +1,6 @@
 'use strict';
 
-// Metering Plug MT2792
+// Metering Plug V2 MT2792
 
 const Homey = require('homey');
 const DevoloDevice = require('../../lib/devolodevice');

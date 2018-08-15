@@ -1,0 +1,113 @@
+[
+{  
+   "id":"mt2758_turn_siren_on",
+   "title":{  
+      "en":"Turn siren on",
+      "nl":"Zet sirene aan"
+   },
+   "args":[  
+      {  
+         "name":"device",
+         "type":"device",
+         "filter":"driver_id=mt2758"
+      },
+      {  
+         "name":"which",
+         "type":"dropdown",
+         "values":[  
+            {  
+               "id":"emergency",
+               "label":{  
+                  "en":"Emergengy",
+                  "de":"Notfall"
+               }
+            },
+            {  
+               "id":"fire",
+               "label":{  
+                  "en":"Fire",
+                  "de":"Feueralarm"
+               }
+            },
+            {  
+               "id":"ambulance",
+               "label":{  
+                  "en":"Ambulance",
+                  "de":"Krankenwagen"
+               }
+            },
+            {  
+               "id":"police",
+               "label":{  
+                  "en":"Police",
+                  "de":"Polizeisirene"
+               }
+            },
+            {  
+               "id":"silentalarm",
+               "label":{  
+                  "en":"Silent Alarm",
+                  "de":"Stiller Alarm"
+               }
+            },
+            {  
+               "id":"doorbell",
+               "label":{  
+                  "en":"Doorbell",
+                  "de":"Türklingel"
+               }
+            },
+            {  
+               "id":"blinking",
+               "label":{  
+                  "en":"Blinking",
+                  "de":"Blinken"
+               }
+            },
+            {  
+               "id":"arm",
+               "label":{  
+                  "en":"Arm",
+                  "de":"Scharfstellen"
+               }
+            },
+            {  
+               "id":"disarm",
+               "label":{  
+                  "en":"Disarm",
+                  "de":"Entschärfen"
+               }
+            }
+         ]
+      }
+   ]
+},
+{  
+   "id":"mt2758_turn_siren_on_default",
+   "title":{  
+      "en":"Turn siren on (default sound)",
+      "nl":"Zet sirene uit"
+   },
+   "args":[  
+      {  
+         "name":"device",
+         "type":"device",
+         "filter":"driver_id=mt2758"
+      }
+   ]
+},
+{  
+   "id":"mt2758_turn_siren_off",
+   "title":{  
+      "en":"Turn siren off",
+      "nl":"Zet sirene uit"
+   },
+   "args":[  
+      {  
+         "name":"device",
+         "type":"device",
+         "filter":"driver_id=mt2758"
+      }
+   ]
+}
+]
