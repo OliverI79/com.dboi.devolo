@@ -1,0 +1,17 @@
+{
+  "triggers": [
+    {
+      "id": "mt2649_button",
+      "title": {
+        "en": "Then button is pressed"
+      },
+      "args": [
+        {
+          "name": "device",
+          "type": "device",
+          "filter": "driver_id=mt2649"
+        }
+      ]
+    }
+  ]
+}

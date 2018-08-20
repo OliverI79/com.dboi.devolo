@@ -1,0 +1,45 @@
+{
+    "id": "mt2653",
+    "name": {
+      "en": "Home Control Key MT2653"
+    },
+    "class": "button",
+    "capabilities": [
+      "measure_battery"
+    ],
+    "images": {
+      "large": "/drivers/mt2653/assets/images/large.png",
+      "small": "/drivers/mt2653/assets/images/small.png"
+    },
+    "zwave": {
+      "manufacturerId": 373,
+      "productTypeId": [
+        256
+      ],
+      "productId": [
+        258
+      ],
+      "zwaveAllianceProductId": 2134,
+      "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2134/MT2653_en.pdf",
+      "learnmode": {
+        "instruction": {
+          "en": "When in factory default push Button 3 (secure) or Button 4 (normal) for one second to enter inclusion mode. The inclusion mode is indicated by a blinking green LED. From second device on you need to enter management mode  push all four buttons together for one second - green led blinks slowly), hit button 3 ( enter primary controller functions - green led blinks faster) and then button 1 (secure) or button 2 (normal)."
+        }
+      },
+      "unlearnmode": {
+        "instruction": {
+          "en": "Enter management mode  by push all four buttons together for one second - green led blinks slowly), hit button 3 ( enter primary controller functions - green led blinks faster) and then button 3 again.\r\n\r\n  "
+        }
+      },
+      "associationGroups": [
+        1
+      ],
+      "associationGroupsOptions": {
+        "1": {
+          "hint": {
+            "en": "Z-Wave Plus Lifeline"
+          }
+        }
+      }
+    }
+  }

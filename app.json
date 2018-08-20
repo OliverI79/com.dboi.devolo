@@ -33,414 +33,6 @@
   "bugs": {
     "url": "https://github.com/oickler/com.dboi.devolo/issues"
   },
-  "flow": {
-    "triggers": [
-      {
-        "id": "mt2649_button",
-        "title": {
-          "en": "Then button is pressed"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2649"
-          }
-        ]
-      },
-      {
-        "id": "mt2652_button",
-        "title": {
-          "en": "Then button is pressed"
-        },
-        "tokens": [
-          {
-            "name": "num",
-            "type": "number",
-            "title": {
-              "en": "num"
-            }
-          }
-        ],
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
-          }
-        ]
-      },
-      {
-        "id": "mt2652_button1_single",
-        "title": {
-          "en": "Button 1 single press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
-          }
-        ]
-      },
-      {
-        "id": "mt2652_button2_single",
-        "title": {
-          "en": "Button 2 single press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
-          }
-        ]
-      },
-      {
-        "id": "mt2652_button3_single",
-        "title": {
-          "en": "Button 3 single press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
-          }
-        ]
-      },
-      {
-        "id": "mt2652_button4_single",
-        "title": {
-          "en": "Button 4 single press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
-          }
-        ]
-      },
-      {
-        "id": "mt2652_button1_double",
-        "title": {
-          "en": "Button 1 double press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
-          }
-        ]
-      },
-      {
-        "id": "mt2652_button2_double",
-        "title": {
-          "en": "Button 2 double press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
-          }
-        ]
-      },
-      {
-        "id": "mt2652_button3_double",
-        "title": {
-          "en": "Button 3 double press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
-          }
-        ]
-      },
-      {
-        "id": "mt2652_button4_double",
-        "title": {
-          "en": "Button 4 double press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
-          }
-        ]
-      },
-      {
-        "id": "mt2653_button",
-        "title": {
-          "en": "Then button is pressed"
-        },
-        "tokens": [
-          {
-            "name": "num",
-            "type": "number",
-            "title": {
-              "en": "num"
-            }
-          }
-        ],
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
-          }
-        ]
-      },
-      {
-        "id": "mt2653_button1_single",
-        "title": {
-          "en": "Button 1 single press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
-          }
-        ]
-      },
-      {
-        "id": "mt2653_button2_single",
-        "title": {
-          "en": "Button 2 single press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
-          }
-        ]
-      },
-      {
-        "id": "mt2653_button3_single",
-        "title": {
-          "en": "Button 3 single press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
-          }
-        ]
-      },
-      {
-        "id": "mt2653_button4_single",
-        "title": {
-          "en": "Button 4 single press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
-          }
-        ]
-      },
-      {
-        "id": "mt2653_button1_double",
-        "title": {
-          "en": "Button 1 double press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
-          }
-        ]
-      },
-      {
-        "id": "mt2653_button2_double",
-        "title": {
-          "en": "Button 2 double press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
-          }
-        ]
-      },
-      {
-        "id": "mt2653_button3_double",
-        "title": {
-          "en": "Button 3 double press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
-          }
-        ]
-      },
-      {
-        "id": "mt2653_button4_double",
-        "title": {
-          "en": "Button 4 double press"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
-          }
-        ]
-      },
-      {
-        "id": "mt2758_turned_siren_on",
-        "title": {
-          "en": "The siren turned on"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2758"
-          }
-        ]
-      },
-      {
-        "id": "mt2758_turned_siren_off",
-        "title": {
-          "en": "The siren turned off"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2758"
-          }
-        ]
-      }
-    ],
-    "actions": [
-      {
-        "id": "mt2758_turn_siren_on",
-        "title": {
-          "en": "Turn siren on",
-          "nl": "Zet sirene aan"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2758"
-          },
-          {
-            "name": "which",
-            "type": "dropdown",
-            "values": [
-              {
-                "id": "emergency",
-                "label": {
-                  "en": "Emergengy",
-                  "de": "Notfall"
-                }
-              },
-              {
-                "id": "fire",
-                "label": {
-                  "en": "Fire",
-                  "de": "Feueralarm"
-                }
-              },
-              {
-                "id": "ambulance",
-                "label": {
-                  "en": "Ambulance",
-                  "de": "Krankenwagen"
-                }
-              },
-              {
-                "id": "police",
-                "label": {
-                  "en": "Police",
-                  "de": "Polizeisirene"
-                }
-              },
-              {
-                "id": "silentalarm",
-                "label": {
-                  "en": "Silent Alarm",
-                  "de": "Stiller Alarm"
-                }
-              },
-              {
-                "id": "doorbell",
-                "label": {
-                  "en": "Doorbell",
-                  "de": "Türklingel"
-                }
-              },
-              {
-                "id": "blinking",
-                "label": {
-                  "en": "Blinking",
-                  "de": "Blinken"
-                }
-              },
-              {
-                "id": "arm",
-                "label": {
-                  "en": "Arm",
-                  "de": "Scharfstellen"
-                }
-              },
-              {
-                "id": "disarm",
-                "label": {
-                  "en": "Disarm",
-                  "de": "Entschärfen"
-                }
-              }
-            ]
-          }
-        ]
-      },
-      {
-        "id": "mt2758_turn_siren_on_default",
-        "title": {
-          "en": "Turn siren on (default sound)",
-          "nl": "Zet sirene uit"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2758"
-          }
-        ]
-      },
-      {
-        "id": "mt2758_turn_siren_off",
-        "title": {
-          "en": "Turn siren off",
-          "nl": "Zet sirene uit"
-        },
-        "args": [
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2758"
-          }
-        ]
-      }
-    ]
-  },
   "drivers": [
     {
       "id": "mt2646",
@@ -456,6 +48,37 @@
       "images": {
         "large": "/drivers/mt2646/assets/images/large.png",
         "small": "/drivers/mt2646/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          1
+        ],
+        "productId": [
+          17
+        ],
+        "zwaveAllianceProductId": 1129,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1129/PAN11-1B manual-20140816.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "1.  Put your Z-Wave controller into inclusion mode by following the instructions provided by the controller manufacturer. \n2.  Pressing On/Off button three times within 2 seconds will enter inclusion \n     mode on the switch. "
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "1.  Put your Z-Wave controller into exclusion mode by following the instructions provided by the controller manufacturer. \n2.  Pressing On/Off button three times within 2 seconds will enter exclusion \n     mode on the switch. "
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
       },
       "settings": [
         {
@@ -703,38 +326,7 @@
           ],
           "type": "dropdown"
         }
-      ],
-      "zwave": {
-        "manufacturerId": 373,
-        "productTypeId": [
-          1
-        ],
-        "productId": [
-          17
-        ],
-        "zwaveAllianceProductId": 1129,
-        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1129/PAN11-1B manual-20140816.pdf",
-        "learnmode": {
-          "instruction": {
-            "en": "1.  Put your Z-Wave controller into inclusion mode by following the instructions provided by the controller manufacturer. \n2.  Pressing On/Off button three times within 2 seconds will enter inclusion \n     mode on the switch. "
-          }
-        },
-        "unlearnmode": {
-          "instruction": {
-            "en": "1.  Put your Z-Wave controller into exclusion mode by following the instructions provided by the controller manufacturer. \n2.  Pressing On/Off button three times within 2 seconds will enter exclusion \n     mode on the switch. "
-          }
-        },
-        "associationGroups": [
-          1
-        ],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Z-Wave Plus Lifeline"
-            }
-          }
-        }
-      }
+      ]
     },
     {
       "id": "mt2647",
@@ -752,6 +344,59 @@
       "images": {
         "large": "/drivers/mt2647/assets/images/large.png",
         "small": "/drivers/mt2647/assets/images/small.png"
+      },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon"
+          },
+          {
+            "id": "battery",
+            "capabilities": [
+              "measure_battery"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "alarm_motion",
+              "measure_luminance",
+              "measure_temperature",
+              "alarm_tamper"
+            ]
+          }
+        ]
+      },
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          13
+        ],
+        "zwaveAllianceProductId": 1131,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1131/Devolo home Control Motion.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "There are two tamper keys in the device, one is in the back side, another is in the front side.  Both of them  can add,  remove, reset or association from Z-Wave network.\nTo add into a Z-Wave network: \n1. Have Z-Wave  Controller entered inclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the inclusion mode.\n3. After add successful, the device will wake to receive the setting command from Z-Wave Controller about 20 seconds."
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "There are two tamper keys in the device, one is in the back side, another is in the front side.  Both of them  can add,  remove, reset or association from Z-Wave network.\nTo remove the device from a Z-Wave network: \n1. Have Z-Wave  Controller entered exclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the exclusion mode.\nNode ID has been excluded."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
       },
       "settings": [
         {
@@ -821,7 +466,7 @@
         },
         {
           "id": "5",
-          "value": 0,
+          "value": 8,
           "label": {
             "en": "Operation Mode",
             "de": "Betriebsmodus"
@@ -1073,17 +718,35 @@
           },
           "type": "number"
         }
+      ]
+    },
+    {
+      "id": "mt2648",
+      "name": {
+        "en": "Door/Window Sensor MT2648"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_contact",
+        "alarm_tamper",
+        "measure_battery",
+        "measure_luminance",
+        "measure_temperature"
       ],
+      "images": {
+        "large": "/drivers/mt2648/assets/images/large.png",
+        "small": "/drivers/mt2648/assets/images/small.png"
+      },
       "zwave": {
         "manufacturerId": 373,
         "productTypeId": [
           2
         ],
         "productId": [
-          13
+          14
         ],
-        "zwaveAllianceProductId": 1131,
-        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1131/Devolo home Control Motion.pdf",
+        "zwaveAllianceProductId": 1130,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1130/Devolo home Control Door-Window.pdf",
         "learnmode": {
           "instruction": {
             "en": "There are two tamper keys in the device, one is in the back side, another is in the front side.  Both of them  can add,  remove, reset or association from Z-Wave network.\nTo add into a Z-Wave network: \n1. Have Z-Wave  Controller entered inclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the inclusion mode.\n3. After add successful, the device will wake to receive the setting command from Z-Wave Controller about 20 seconds."
@@ -1104,24 +767,6 @@
             }
           }
         }
-      }
-    },
-    {
-      "id": "mt2648",
-      "name": {
-        "en": "Door/Window Sensor MT2648"
-      },
-      "class": "sensor",
-      "capabilities": [
-        "alarm_contact",
-        "alarm_tamper",
-        "measure_battery",
-        "measure_luminance",
-        "measure_temperature"
-      ],
-      "images": {
-        "large": "/drivers/mt2648/assets/images/large.png",
-        "small": "/drivers/mt2648/assets/images/small.png"
       },
       "settings": [
         {
@@ -1380,38 +1025,7 @@
           },
           "type": "number"
         }
-      ],
-      "zwave": {
-        "manufacturerId": 373,
-        "productTypeId": [
-          2
-        ],
-        "productId": [
-          14
-        ],
-        "zwaveAllianceProductId": 1130,
-        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1130/Devolo home Control Door-Window.pdf",
-        "learnmode": {
-          "instruction": {
-            "en": "There are two tamper keys in the device, one is in the back side, another is in the front side.  Both of them  can add,  remove, reset or association from Z-Wave network.\nTo add into a Z-Wave network: \n1. Have Z-Wave  Controller entered inclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the inclusion mode.\n3. After add successful, the device will wake to receive the setting command from Z-Wave Controller about 20 seconds."
-          }
-        },
-        "unlearnmode": {
-          "instruction": {
-            "en": "There are two tamper keys in the device, one is in the back side, another is in the front side.  Both of them  can add,  remove, reset or association from Z-Wave network.\nTo remove the device from a Z-Wave network: \n1. Have Z-Wave  Controller entered exclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the exclusion mode.\nNode ID has been excluded."
-          }
-        },
-        "associationGroups": [
-          1
-        ],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Z-Wave Plus Lifeline"
-            }
-          }
-        }
-      }
+      ]
     },
     {
       "id": "mt2649",
@@ -1428,6 +1042,16 @@
       "images": {
         "large": "/drivers/mt2649/assets/images/large.png",
         "small": "/drivers/mt2649/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 2,
+        "productTypeId": [
+          3
+        ],
+        "productId": [
+          32784
+        ],
+        "zwaveAllianceProductId": 1188
       },
       "settings": [
         {
@@ -1692,17 +1316,7 @@
           ],
           "type": "dropdown"
         }
-      ],
-      "zwave": {
-        "manufacturerId": 2,
-        "productTypeId": [
-          3
-        ],
-        "productId": [
-          32784
-        ],
-        "zwaveAllianceProductId": 1188
-      }
+      ]
     },
     {
       "id": "mt2650",
@@ -1728,7 +1342,8 @@
           373
         ],
         "zwaveAllianceProductId": 1506
-      }
+      },
+      "settings": []
     },
     {
       "id": "mt2651",
@@ -1774,7 +1389,8 @@
             }
           }
         }
-      }
+      },
+      "settings": []
     },
     {
       "id": "mt2652",
@@ -1789,559 +1405,6 @@
         "large": "/drivers/mt2652/assets/images/large.png",
         "small": "/drivers/mt2652/assets/images/small.png"
       },
-      "settings": [
-        {
-          "id": "1",
-          "value": "1",
-          "label": {
-            "en": "Button 1 and 3 pair mode",
-            "de": "Taster 1 und 3 gekoppelt"
-          },
-          "hint": {
-            "en": "In separate mode button 1 works with group A, button 3 with groups C. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. In pair button 1/3 are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group A, double click with group C.",
-            "de": "Im entkoppelten Modus steuert Taster 1 die Gruppe A und Taster 3 die Gruppe C, im gekoppelten Modus steuern beide die Gruppen A und C, wobei Einfachklick Gruppe A und Doppelklick Gruppe C schaltet."
-          },
-          "zwave": {
-            "index": 1,
-            "size": 1
-          },
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "seperately",
-                "de": "Taster 1 und 3 sind unabängig"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "In pair without double clicks",
-                "de": "Taster 1 und 3 steuern gemeinsam. Doppelklick wird nicht beachtet"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "In pair with double clicks",
-                "de": "Taster 1 und 3 steuern gemeinsam. Doppelklick wird beachtet"
-              }
-            }
-          ],
-          "type": "dropdown"
-        },
-        {
-          "id": "2",
-          "value": "1",
-          "label": {
-            "en": "Button 2 and 4 pair mode",
-            "de": "Taster 2 und 4 gekoppelt"
-          },
-          "hint": {
-            "en": "In separate mode button 2 works with control group B, button 4 with control group D. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. In pair button B/D are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B, double click with group D.",
-            "de": "Im entkoppelten Modus steuert Taster 2 die Gruppe B und Taste 4 die Gruppe D, im gekoppelten Modus steuern beide die Gruppen B und D, wobei Einfachklick Gruppe B und Doppelklick Gruppe D schaltet."
-          },
-          "zwave": {
-            "index": 2,
-            "size": 1
-          },
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "seperately",
-                "de": "Taster 2 und 4 sind unabängig"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "In pair without double clicks",
-                "de": "Taster 2 und 4 steuern gemeinsam. Doppelklick wird nicht beachtet"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "In pair with double clicks",
-                "de": "Taster 2 und 4 steuern gemeinsam. Doppelklick wird beachtet"
-              }
-            }
-          ],
-          "type": "dropdown"
-        },
-        {
-          "id": "11",
-          "value": "8",
-          "label": {
-            "en": "Command to Control Group A",
-            "de": "Kommando an Steuergruppe A"
-          },
-          "hint": {
-            "en": "This parameter defines the command to be sent to devices of control group A when the related button is pressed",
-            "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe A gesendet wird."
-          },
-          "zwave": {
-            "index": 11,
-            "size": 1
-          },
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Disabled",
-                "de": "Deaktiviert"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
-                "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "Switch On/Off only (send Basic Set)",
-                "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
-              }
-            },
-            {
-              "id": "3",
-              "label": {
-                "en": "Switch All",
-                "de": "Switch All Kommando"
-              }
-            },
-            {
-              "id": "4",
-              "label": {
-                "en": "Send Scenes",
-                "de": "Szenenaktivierung"
-              }
-            },
-            {
-              "id": "5",
-              "label": {
-                "en": "Send Preconfigured Scenes",
-                "de": "Vorkonfigurierte Szenen werden gesendet"
-              }
-            },
-            {
-              "id": "6",
-              "label": {
-                "en": "Control using Home Control",
-                "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
-              }
-            },
-            {
-              "id": "7",
-              "label": {
-                "en": "Control DoorLock",
-                "de": "Control DoorLock"
-              }
-            },
-            {
-              "id": "8",
-              "label": {
-                "en": "Central Scene to Gateway",
-                "de": "Zentrale Szene im Gateway"
-              }
-            }
-          ],
-          "type": "dropdown"
-        },
-        {
-          "id": "12",
-          "value": "8",
-          "label": {
-            "en": "Command to Control Group B",
-            "de": "Kommando an Steuergruppe B"
-          },
-          "hint": {
-            "en": "This parameter defines the command to be sent to devices of control group B when the related button is pressed",
-            "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe B gesendet wird."
-          },
-          "zwave": {
-            "index": 12,
-            "size": 1
-          },
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Disabled",
-                "de": "Deaktiviert"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
-                "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "Switch On/Off only (send Basic Set)",
-                "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
-              }
-            },
-            {
-              "id": "3",
-              "label": {
-                "en": "Switch All",
-                "de": "Switch All Kommando"
-              }
-            },
-            {
-              "id": "4",
-              "label": {
-                "en": "Send Scenes",
-                "de": "Szenenaktivierung"
-              }
-            },
-            {
-              "id": "5",
-              "label": {
-                "en": "Send Preconfigured Scenes",
-                "de": "Vorkonfigurierte Szenen werden gesendet"
-              }
-            },
-            {
-              "id": "6",
-              "label": {
-                "en": "Control using Home Control",
-                "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
-              }
-            },
-            {
-              "id": "7",
-              "label": {
-                "en": "Control DoorLock",
-                "de": "Control DoorLock"
-              }
-            },
-            {
-              "id": "8",
-              "label": {
-                "en": "Central Scene to Gateway",
-                "de": "Zentrale Szene im Gateway"
-              }
-            }
-          ],
-          "type": "dropdown"
-        },
-        {
-          "id": "13",
-          "value": "8",
-          "label": {
-            "en": "Command to Control Group C",
-            "de": "Kommando an Steuergruppe C"
-          },
-          "hint": {
-            "en": "This parameter defines the command to be sent to devices of control group C when the related button is pressed",
-            "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe C gesendet wird."
-          },
-          "zwave": {
-            "index": 13,
-            "size": 1
-          },
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Disabled",
-                "de": "Deaktiviert"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
-                "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "Switch On/Off only (send Basic Set)",
-                "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
-              }
-            },
-            {
-              "id": "3",
-              "label": {
-                "en": "Switch All",
-                "de": "Switch All Kommando"
-              }
-            },
-            {
-              "id": "4",
-              "label": {
-                "en": "Send Scenes",
-                "de": "Szenenaktivierung"
-              }
-            },
-            {
-              "id": "5",
-              "label": {
-                "en": "Send Preconfigured Scenes",
-                "de": "Vorkonfigurierte Szenen werden gesendet"
-              }
-            },
-            {
-              "id": "6",
-              "label": {
-                "en": "Control using Home Control",
-                "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
-              }
-            },
-            {
-              "id": "7",
-              "label": {
-                "en": "Control DoorLock",
-                "de": "Control DoorLock"
-              }
-            },
-            {
-              "id": "8",
-              "label": {
-                "en": "Central Scene to Gateway",
-                "de": "Zentrale Szene im Gateway"
-              }
-            }
-          ],
-          "type": "dropdown"
-        },
-        {
-          "id": "14",
-          "value": "8",
-          "label": {
-            "en": "Command to Control Group D",
-            "de": "Kommando an Steuergruppe D"
-          },
-          "hint": {
-            "en": "This parameter defines the command to be sent to devices of control group D when the related button is pressed",
-            "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe D gesendet wird."
-          },
-          "zwave": {
-            "index": 14,
-            "size": 1
-          },
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Disabled",
-                "de": "Deaktiviert"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
-                "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "Switch On/Off only (send Basic Set)",
-                "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
-              }
-            },
-            {
-              "id": "3",
-              "label": {
-                "en": "Switch All",
-                "de": "Switch All Kommando"
-              }
-            },
-            {
-              "id": "4",
-              "label": {
-                "en": "Send Scenes",
-                "de": "Szenenaktivierung"
-              }
-            },
-            {
-              "id": "5",
-              "label": {
-                "en": "Send Preconfigured Scenes",
-                "de": "Vorkonfigurierte Szenen werden gesendet"
-              }
-            },
-            {
-              "id": "6",
-              "label": {
-                "en": "Control using Home Control",
-                "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
-              }
-            },
-            {
-              "id": "7",
-              "label": {
-                "en": "Control DoorLock",
-                "de": "Control DoorLock"
-              }
-            },
-            {
-              "id": "8",
-              "label": {
-                "en": "Central Scene to Gateway",
-                "de": "Zentrale Szene im Gateway"
-              }
-            }
-          ],
-          "type": "dropdown"
-        },
-        {
-          "id": "21",
-          "value": "0",
-          "label": {
-            "en": "Send the following Switch All commands",
-            "de": "Sende die folgenden 'Switch All' Kommandos"
-          },
-          "hint": {
-            "en": ""
-          },
-          "zwave": {
-            "index": 21,
-            "size": 1
-          },
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Switch off only",
-                "de": "Nur alle ausschalten"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Switch on only",
-                "de": "Nur alle Einschalten"
-              }
-            },
-            {
-              "id": "255",
-              "label": {
-                "en": "Switch all on and off",
-                "de": "Alle einschalten und ausschalten"
-              }
-            }
-          ],
-          "type": "dropdown"
-        },
-        {
-          "id": "22",
-          "value": "0",
-          "label": {
-            "en": "Invert buttons",
-            "de": "Invertieren der Tastenbedeutung Hoch und Runter"
-          },
-          "hint": {
-            "en": ""
-          },
-          "zwave": {
-            "index": 22,
-            "size": 1
-          },
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "No",
-                "de": "Nein"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "Yes",
-                "de": "Ja"
-              }
-            }
-          ],
-          "type": "dropdown"
-        },
-        {
-          "id": "25",
-          "value": "0",
-          "label": {
-            "en": "Blocks wakeup even when wakeup interval is set",
-            "de": "Blockiert das Aufwecken des Gerätes selbst bei gesetztem Aufweckinterval"
-          },
-          "hint": {
-            "en": "",
-            "de": "Weckt der KFOB auf und es befindet sich kein Controller in der Nähe, wird mit erfolglosen Kommunikationsversuchen viel Batterieleistung verbraucht."
-          },
-          "zwave": {
-            "index": 25,
-            "size": 1
-          },
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "Block",
-                "de": "Aufwecken blockiert"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "WakeUp",
-                "de": "WakeUp findet bei entsprechender Konfiguration statt."
-              }
-            }
-          ],
-          "type": "dropdown"
-        },
-        {
-          "id": "30",
-          "value": "1",
-          "label": {
-            "en": "Send unsolicited Battery Report on Wake Up",
-            "de": "Sende beim Aufwecken unaufgefordert eine Batterie-Statusmeldung"
-          },
-          "hint": {
-            "en": ""
-          },
-          "zwave": {
-            "index": 30,
-            "size": 1
-          },
-          "values": [
-            {
-              "id": "0",
-              "label": {
-                "en": "No",
-                "de": "Nein"
-              }
-            },
-            {
-              "id": "1",
-              "label": {
-                "en": "To same node as wake up notification",
-                "de": "An das gleiche Gerät wie die Aufweck-Meldung"
-              }
-            },
-            {
-              "id": "2",
-              "label": {
-                "en": "Broadcast",
-                "de": "Broadcast an alle Nachbarn"
-              }
-            }
-          ],
-          "type": "dropdown"
-        }
-      ],
       "zwave": {
         "manufacturerId": 373,
         "productTypeId": [
@@ -2372,20 +1435,6 @@
             }
           }
         }
-      }
-    },
-    {
-      "id": "mt2653",
-      "name": {
-        "en": "Home Control Key MT2653"
-      },
-      "class": "button",
-      "capabilities": [
-        "measure_battery"
-      ],
-      "images": {
-        "large": "/drivers/mt2653/assets/images/large.png",
-        "small": "/drivers/mt2653/assets/images/small.png"
       },
       "settings": [
         {
@@ -2939,7 +1988,21 @@
           ],
           "type": "dropdown"
         }
+      ]
+    },
+    {
+      "id": "mt2653",
+      "name": {
+        "en": "Home Control Key MT2653"
+      },
+      "class": "button",
+      "capabilities": [
+        "measure_battery"
       ],
+      "images": {
+        "large": "/drivers/mt2653/assets/images/large.png",
+        "small": "/drivers/mt2653/assets/images/small.png"
+      },
       "zwave": {
         "manufacturerId": 373,
         "productTypeId": [
@@ -2970,7 +2033,560 @@
             }
           }
         }
-      }
+      },
+      "settings": [
+        {
+          "id": "1",
+          "value": "1",
+          "label": {
+            "en": "Button 1 and 3 pair mode",
+            "de": "Taster 1 und 3 gekoppelt"
+          },
+          "hint": {
+            "en": "In separate mode button 1 works with group A, button 3 with groups C. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. In pair button 1/3 are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group A, double click with group C.",
+            "de": "Im entkoppelten Modus steuert Taster 1 die Gruppe A und Taster 3 die Gruppe C, im gekoppelten Modus steuern beide die Gruppen A und C, wobei Einfachklick Gruppe A und Doppelklick Gruppe C schaltet."
+          },
+          "zwave": {
+            "index": 1,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "seperately",
+                "de": "Taster 1 und 3 sind unabängig"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "In pair without double clicks",
+                "de": "Taster 1 und 3 steuern gemeinsam. Doppelklick wird nicht beachtet"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "In pair with double clicks",
+                "de": "Taster 1 und 3 steuern gemeinsam. Doppelklick wird beachtet"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "2",
+          "value": "1",
+          "label": {
+            "en": "Button 2 and 4 pair mode",
+            "de": "Taster 2 und 4 gekoppelt"
+          },
+          "hint": {
+            "en": "In separate mode button 2 works with control group B, button 4 with control group D. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. In pair button B/D are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B, double click with group D.",
+            "de": "Im entkoppelten Modus steuert Taster 2 die Gruppe B und Taste 4 die Gruppe D, im gekoppelten Modus steuern beide die Gruppen B und D, wobei Einfachklick Gruppe B und Doppelklick Gruppe D schaltet."
+          },
+          "zwave": {
+            "index": 2,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "seperately",
+                "de": "Taster 2 und 4 sind unabängig"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "In pair without double clicks",
+                "de": "Taster 2 und 4 steuern gemeinsam. Doppelklick wird nicht beachtet"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "In pair with double clicks",
+                "de": "Taster 2 und 4 steuern gemeinsam. Doppelklick wird beachtet"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "11",
+          "value": "8",
+          "label": {
+            "en": "Command to Control Group A",
+            "de": "Kommando an Steuergruppe A"
+          },
+          "hint": {
+            "en": "This parameter defines the command to be sent to devices of control group A when the related button is pressed",
+            "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe A gesendet wird."
+          },
+          "zwave": {
+            "index": 11,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "de": "Deaktiviert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch On/Off only (send Basic Set)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch All",
+                "de": "Switch All Kommando"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send Scenes",
+                "de": "Szenenaktivierung"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send Preconfigured Scenes",
+                "de": "Vorkonfigurierte Szenen werden gesendet"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Control using Home Control",
+                "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Control DoorLock",
+                "de": "Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Central Scene to Gateway",
+                "de": "Zentrale Szene im Gateway"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "12",
+          "value": "8",
+          "label": {
+            "en": "Command to Control Group B",
+            "de": "Kommando an Steuergruppe B"
+          },
+          "hint": {
+            "en": "This parameter defines the command to be sent to devices of control group B when the related button is pressed",
+            "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe B gesendet wird."
+          },
+          "zwave": {
+            "index": 12,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "de": "Deaktiviert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch On/Off only (send Basic Set)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch All",
+                "de": "Switch All Kommando"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send Scenes",
+                "de": "Szenenaktivierung"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send Preconfigured Scenes",
+                "de": "Vorkonfigurierte Szenen werden gesendet"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Control using Home Control",
+                "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Control DoorLock",
+                "de": "Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Central Scene to Gateway",
+                "de": "Zentrale Szene im Gateway"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "13",
+          "value": "8",
+          "label": {
+            "en": "Command to Control Group C",
+            "de": "Kommando an Steuergruppe C"
+          },
+          "hint": {
+            "en": "This parameter defines the command to be sent to devices of control group C when the related button is pressed",
+            "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe C gesendet wird."
+          },
+          "zwave": {
+            "index": 13,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "de": "Deaktiviert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch On/Off only (send Basic Set)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch All",
+                "de": "Switch All Kommando"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send Scenes",
+                "de": "Szenenaktivierung"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send Preconfigured Scenes",
+                "de": "Vorkonfigurierte Szenen werden gesendet"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Control using Home Control",
+                "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Control DoorLock",
+                "de": "Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Central Scene to Gateway",
+                "de": "Zentrale Szene im Gateway"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "14",
+          "value": "8",
+          "label": {
+            "en": "Command to Control Group D",
+            "de": "Kommando an Steuergruppe D"
+          },
+          "hint": {
+            "en": "This parameter defines the command to be sent to devices of control group D when the related button is pressed",
+            "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe D gesendet wird."
+          },
+          "zwave": {
+            "index": 14,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Disabled",
+                "de": "Deaktiviert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Switch On/Off only (send Basic Set)",
+                "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
+              }
+            },
+            {
+              "id": "3",
+              "label": {
+                "en": "Switch All",
+                "de": "Switch All Kommando"
+              }
+            },
+            {
+              "id": "4",
+              "label": {
+                "en": "Send Scenes",
+                "de": "Szenenaktivierung"
+              }
+            },
+            {
+              "id": "5",
+              "label": {
+                "en": "Send Preconfigured Scenes",
+                "de": "Vorkonfigurierte Szenen werden gesendet"
+              }
+            },
+            {
+              "id": "6",
+              "label": {
+                "en": "Control using Home Control",
+                "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
+              }
+            },
+            {
+              "id": "7",
+              "label": {
+                "en": "Control DoorLock",
+                "de": "Control DoorLock"
+              }
+            },
+            {
+              "id": "8",
+              "label": {
+                "en": "Central Scene to Gateway",
+                "de": "Zentrale Szene im Gateway"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "21",
+          "value": "0",
+          "label": {
+            "en": "Send the following Switch All commands",
+            "de": "Sende die folgenden 'Switch All' Kommandos"
+          },
+          "hint": {
+            "en": ""
+          },
+          "zwave": {
+            "index": 21,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Switch off only",
+                "de": "Nur alle ausschalten"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Switch on only",
+                "de": "Nur alle Einschalten"
+              }
+            },
+            {
+              "id": "255",
+              "label": {
+                "en": "Switch all on and off",
+                "de": "Alle einschalten und ausschalten"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "22",
+          "value": "0",
+          "label": {
+            "en": "Invert buttons",
+            "de": "Invertieren der Tastenbedeutung Hoch und Runter"
+          },
+          "hint": {
+            "en": ""
+          },
+          "zwave": {
+            "index": 22,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "No",
+                "de": "Nein"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "Yes",
+                "de": "Ja"
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "25",
+          "value": "0",
+          "label": {
+            "en": "Blocks wakeup even when wakeup interval is set",
+            "de": "Blockiert das Aufwecken des Gerätes selbst bei gesetztem Aufweckinterval"
+          },
+          "hint": {
+            "en": "",
+            "de": "Weckt der KFOB auf und es befindet sich kein Controller in der Nähe, wird mit erfolglosen Kommunikationsversuchen viel Batterieleistung verbraucht."
+          },
+          "zwave": {
+            "index": 25,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "Block",
+                "de": "Aufwecken blockiert"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "WakeUp",
+                "de": "WakeUp findet bei entsprechender Konfiguration statt."
+              }
+            }
+          ],
+          "type": "dropdown"
+        },
+        {
+          "id": "30",
+          "value": "1",
+          "label": {
+            "en": "Send unsolicited Battery Report on Wake Up",
+            "de": "Sende beim Aufwecken unaufgefordert eine Batterie-Statusmeldung"
+          },
+          "hint": {
+            "en": ""
+          },
+          "zwave": {
+            "index": 30,
+            "size": 1
+          },
+          "values": [
+            {
+              "id": "0",
+              "label": {
+                "en": "No",
+                "de": "Nein"
+              }
+            },
+            {
+              "id": "1",
+              "label": {
+                "en": "To same node as wake up notification",
+                "de": "An das gleiche Gerät wie die Aufweck-Meldung"
+              }
+            },
+            {
+              "id": "2",
+              "label": {
+                "en": "Broadcast",
+                "de": "Broadcast an alle Nachbarn"
+              }
+            }
+          ],
+          "type": "dropdown"
+        }
+      ]
     },
     {
       "id": "mt2755",
@@ -2987,6 +2603,37 @@
       "images": {
         "large": "/drivers/mt2755/assets/images/large.png",
         "small": "/drivers/mt2755/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          2
+        ],
+        "productId": [
+          32
+        ],
+        "zwaveAllianceProductId": 2226,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2226/MT02756_MT02755_Manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "1. Have Z-Wave™  Controller entered inclusion mode.\r\n2. Pressing the tamper key three times within 1.5 \r\nseconds to enter the inclusion mode.\r\n3. After add successful, the device will wake to \r\nreceive the setting command from Z-Wave™ \r\nController about 20 seconds.\r\n"
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "1. Have Z-Wave™  Controller entered exclusion mode.\r\n2. Pressing tamper key three times within 1.5 seconds\r\nto enter the exclusion mode.\r\nNode ID has been excluded.\r\n"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
       },
       "settings": [
         {
@@ -3178,17 +2825,33 @@
           },
           "type": "number"
         }
+      ]
+    },
+    {
+      "id": "mt2756",
+      "name": {
+        "en": "Flood Sensor MT2756"
+      },
+      "class": "sensor",
+      "capabilities": [
+        "alarm_tamper",
+        "alarm_water",
+        "measure_battery"
       ],
+      "images": {
+        "large": "/drivers/mt2756/assets/images/large.png",
+        "small": "/drivers/mt2756/assets/images/small.png"
+      },
       "zwave": {
         "manufacturerId": 373,
         "productTypeId": [
           2
         ],
         "productId": [
-          32
+          33
         ],
-        "zwaveAllianceProductId": 2226,
-        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2226/MT02756_MT02755_Manual.pdf",
+        "zwaveAllianceProductId": 2227,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2227/MT02756_MT02755_Manual.pdf",
         "learnmode": {
           "instruction": {
             "en": "1. Have Z-Wave™  Controller entered inclusion mode.\r\n2. Pressing the tamper key three times within 1.5 \r\nseconds to enter the inclusion mode.\r\n3. After add successful, the device will wake to \r\nreceive the setting command from Z-Wave™ \r\nController about 20 seconds.\r\n"
@@ -3209,22 +2872,6 @@
             }
           }
         }
-      }
-    },
-    {
-      "id": "mt2756",
-      "name": {
-        "en": "Flood Sensor MT2756"
-      },
-      "class": "sensor",
-      "capabilities": [
-        "alarm_tamper",
-        "alarm_water",
-        "measure_battery"
-      ],
-      "images": {
-        "large": "/drivers/mt2756/assets/images/large.png",
-        "small": "/drivers/mt2756/assets/images/small.png"
       },
       "settings": [
         {
@@ -3364,38 +3011,7 @@
           },
           "type": "number"
         }
-      ],
-      "zwave": {
-        "manufacturerId": 373,
-        "productTypeId": [
-          2
-        ],
-        "productId": [
-          33
-        ],
-        "zwaveAllianceProductId": 2227,
-        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2227/MT02756_MT02755_Manual.pdf",
-        "learnmode": {
-          "instruction": {
-            "en": "1. Have Z-Wave™  Controller entered inclusion mode.\r\n2. Pressing the tamper key three times within 1.5 \r\nseconds to enter the inclusion mode.\r\n3. After add successful, the device will wake to \r\nreceive the setting command from Z-Wave™ \r\nController about 20 seconds.\r\n"
-          }
-        },
-        "unlearnmode": {
-          "instruction": {
-            "en": "1. Have Z-Wave™  Controller entered exclusion mode.\r\n2. Pressing tamper key three times within 1.5 seconds\r\nto enter the exclusion mode.\r\nNode ID has been excluded.\r\n"
-          }
-        },
-        "associationGroups": [
-          1
-        ],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Z-Wave Plus Lifeline"
-            }
-          }
-        }
-      }
+      ]
     },
     {
       "id": "mt2758",
@@ -3410,6 +3026,37 @@
       "images": {
         "large": "/drivers/mt2758/assets/images/large.png",
         "small": "/drivers/mt2758/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          4
+        ],
+        "productId": [
+          10
+        ],
+        "zwaveAllianceProductId": 2308,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2308/MT02758_manual.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "1. Have Z-Wave™ Controller entered inclusion mode.\r\n2. Pressing tamper key three times within 1.5 seconds\r\nto enter the inclusion mode.\r\n3. After add successful, the LED will light ON 1 second"
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "1. Have Z-Wave™ Controller entered exclusion mode.\r\n2. Pressing tamper key three times within 1.5 seconds to enter the exclusion mode.\r\nNode ID has been excluded."
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "Z-Wave Plus Lifeline"
+            }
+          }
+        }
       },
       "settings": [
         {
@@ -3486,38 +3133,7 @@
           },
           "type": "number"
         }
-      ],
-      "zwave": {
-        "manufacturerId": 373,
-        "productTypeId": [
-          4
-        ],
-        "productId": [
-          10
-        ],
-        "zwaveAllianceProductId": 2308,
-        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2308/MT02758_manual.pdf",
-        "learnmode": {
-          "instruction": {
-            "en": "1. Have Z-Wave™ Controller entered inclusion mode.\r\n2. Pressing tamper key three times within 1.5 seconds\r\nto enter the inclusion mode.\r\n3. After add successful, the LED will light ON 1 second"
-          }
-        },
-        "unlearnmode": {
-          "instruction": {
-            "en": "1. Have Z-Wave™ Controller entered exclusion mode.\r\n2. Pressing tamper key three times within 1.5 seconds to enter the exclusion mode.\r\nNode ID has been excluded."
-          }
-        },
-        "associationGroups": [
-          1
-        ],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "Z-Wave Plus Lifeline"
-            }
-          }
-        }
-      }
+      ]
     },
     {
       "id": "mt2792",
@@ -3533,6 +3149,37 @@
       "images": {
         "large": "/drivers/mt2792/assets/images/large.png",
         "small": "/drivers/mt2792/assets/images/small.png"
+      },
+      "zwave": {
+        "manufacturerId": 373,
+        "productTypeId": [
+          0
+        ],
+        "productId": [
+          0
+        ],
+        "zwaveAllianceProductId": 2057,
+        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2057/Home_Control_Schalt_Messsteckdose_2.0_2016_11_02_eng.pdf",
+        "learnmode": {
+          "instruction": {
+            "en": "The Home Control Smart Metering Plug can be included using two different procedures:\r\n\r\nVariant A: Auto Inclusion with the control unit\r\n1. In the Z-Wave-compatible control unit, start the procedure for adding a new device automatically.\r\n2. Plug the Home Control Smart Metering Plug into an available power socket. The Auto Inclusion is run.\r\nDuring the 2-minute timeout of the Auto Inclusion, Node Information Frames are sent within a few seconds. In the auto inclusion, it is not necessary to press the ON/OFF button.\r\n\r\nVariant B: Manual Inclusion with the control unit\r\nIf the time frame (2 minutes) of the Auto Inclusion procedure is exceeded, you can also include the Home Control Smart Metering Plug with the control unit manually.\r\n1. In the Z-Wave -compatible control unit, start the procedure for adding a new device (inclusion).\r\n2. Press the button of the connected Smart Metering Plug 3x within 1.2 seconds to start the inclusion process with the Z-Wave-compatible control unit."
+          }
+        },
+        "unlearnmode": {
+          "instruction": {
+            "en": "1. Put the Z-Wave® controller in Exclusion mode.\r\n2. Press the ON/OFF button 3x within 1.2 seconds to put the device into Exclusion mode.\r\n(indicated by white LED: 0.5 sec. ON, 0.5 sec. OFF)\r\n3. Node ID is now removed. \r\n(After the removal, the device starts again with Auto Inclusion mode.)"
+          }
+        },
+        "associationGroups": [
+          1
+        ],
+        "associationGroupsOptions": {
+          "1": {
+            "hint": {
+              "en": "As the default, the node with the ID 1 is entered in this group. This corresponds to the controller ID. For this association group 1, the Home Control Smart Metering Plug reports the status of the following command classes:\r\nSWITCH_BINARY_REPORT\r\nMETER_REPORT\r\nALARM_REPORT"
+            }
+          }
+        }
       },
       "settings": [
         {
@@ -3760,38 +3407,535 @@
           ],
           "type": "dropdown"
         }
-      ],
-      "zwave": {
-        "manufacturerId": 373,
-        "productTypeId": [
-          0
-        ],
-        "productId": [
-          0
-        ],
-        "zwaveAllianceProductId": 2057,
-        "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2057/Home_Control_Schalt_Messsteckdose_2.0_2016_11_02_eng.pdf",
-        "learnmode": {
-          "instruction": {
-            "en": "The Home Control Smart Metering Plug can be included using two different procedures:\r\n\r\nVariant A: Auto Inclusion with the control unit\r\n1. In the Z-Wave-compatible control unit, start the procedure for adding a new device automatically.\r\n2. Plug the Home Control Smart Metering Plug into an available power socket. The Auto Inclusion is run.\r\nDuring the 2-minute timeout of the Auto Inclusion, Node Information Frames are sent within a few seconds. In the auto inclusion, it is not necessary to press the ON/OFF button.\r\n\r\nVariant B: Manual Inclusion with the control unit\r\nIf the time frame (2 minutes) of the Auto Inclusion procedure is exceeded, you can also include the Home Control Smart Metering Plug with the control unit manually.\r\n1. In the Z-Wave -compatible control unit, start the procedure for adding a new device (inclusion).\r\n2. Press the button of the connected Smart Metering Plug 3x within 1.2 seconds to start the inclusion process with the Z-Wave-compatible control unit."
-          }
+      ]
+    }
+  ],
+  "flow": {
+    "triggers": [
+      {
+        "id": "mt2649_button",
+        "title": {
+          "en": "Then button is pressed"
         },
-        "unlearnmode": {
-          "instruction": {
-            "en": "1. Put the Z-Wave® controller in Exclusion mode.\r\n2. Press the ON/OFF button 3x within 1.2 seconds to put the device into Exclusion mode.\r\n(indicated by white LED: 0.5 sec. ON, 0.5 sec. OFF)\r\n3. Node ID is now removed. \r\n(After the removal, the device starts again with Auto Inclusion mode.)"
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2649"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2649"
           }
+        ]
+      },
+      {
+        "id": "mt2652_button",
+        "title": {
+          "en": "Then button is pressed"
         },
-        "associationGroups": [
-          1
-        ],
-        "associationGroupsOptions": {
-          "1": {
-            "hint": {
-              "en": "As the default, the node with the ID 1 is entered in this group. This corresponds to the controller ID. For this association group 1, the Home Control Smart Metering Plug reports the status of the following command classes:\r\nSWITCH_BINARY_REPORT\r\nMETER_REPORT\r\nALARM_REPORT"
+        "tokens": [
+          {
+            "name": "num",
+            "type": "number",
+            "title": {
+              "en": "num"
             }
           }
-        }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2652"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button1_single",
+        "title": {
+          "en": "Button 1 single press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2652"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button2_single",
+        "title": {
+          "en": "Button 2 single press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2652"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button3_single",
+        "title": {
+          "en": "Button 3 single press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2652"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button4_single",
+        "title": {
+          "en": "Button 4 single press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2652"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button1_double",
+        "title": {
+          "en": "Button 1 double press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2652"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button2_double",
+        "title": {
+          "en": "Button 2 double press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2652"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button3_double",
+        "title": {
+          "en": "Button 3 double press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2652"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2652_button4_double",
+        "title": {
+          "en": "Button 4 double press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2652"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2652"
+          }
+        ]
+      },
+      {
+        "id": "mt2653_button",
+        "title": {
+          "en": "Then button is pressed"
+        },
+        "tokens": [
+          {
+            "name": "num",
+            "type": "number",
+            "title": {
+              "en": "num"
+            }
+          }
+        ],
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2653"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2653"
+          }
+        ]
+      },
+      {
+        "id": "mt2653_button1_single",
+        "title": {
+          "en": "Button 1 single press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2653"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2653"
+          }
+        ]
+      },
+      {
+        "id": "mt2653_button2_single",
+        "title": {
+          "en": "Button 2 single press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2653"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2653"
+          }
+        ]
+      },
+      {
+        "id": "mt2653_button3_single",
+        "title": {
+          "en": "Button 3 single press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2653"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2653"
+          }
+        ]
+      },
+      {
+        "id": "mt2653_button4_single",
+        "title": {
+          "en": "Button 4 single press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2653"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2653"
+          }
+        ]
+      },
+      {
+        "id": "mt2653_button1_double",
+        "title": {
+          "en": "Button 1 double press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2653"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2653"
+          }
+        ]
+      },
+      {
+        "id": "mt2653_button2_double",
+        "title": {
+          "en": "Button 2 double press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2653"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2653"
+          }
+        ]
+      },
+      {
+        "id": "mt2653_button3_double",
+        "title": {
+          "en": "Button 3 double press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2653"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2653"
+          }
+        ]
+      },
+      {
+        "id": "mt2653_button4_double",
+        "title": {
+          "en": "Button 4 double press"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2653"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2653"
+          }
+        ]
+      },
+      {
+        "id": "mt2758_turned_siren_on",
+        "title": {
+          "en": "The siren turned on"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2758"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2758"
+          }
+        ]
+      },
+      {
+        "id": "mt2758_turned_siren_off",
+        "title": {
+          "en": "The siren turned off"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2758"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2758"
+          }
+        ]
       }
-    }
-  ]
+    ],
+    "actions": [
+      {
+        "id": "mt2758_turn_siren_on",
+        "title": {
+          "en": "Turn siren on",
+          "nl": "Zet sirene aan"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2758"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2758"
+          },
+          {
+            "name": "which",
+            "type": "dropdown",
+            "values": [
+              {
+                "id": "emergency",
+                "label": {
+                  "en": "Emergengy",
+                  "de": "Notfall"
+                }
+              },
+              {
+                "id": "fire",
+                "label": {
+                  "en": "Fire",
+                  "de": "Feueralarm"
+                }
+              },
+              {
+                "id": "ambulance",
+                "label": {
+                  "en": "Ambulance",
+                  "de": "Krankenwagen"
+                }
+              },
+              {
+                "id": "police",
+                "label": {
+                  "en": "Police",
+                  "de": "Polizeisirene"
+                }
+              },
+              {
+                "id": "silentalarm",
+                "label": {
+                  "en": "Silent Alarm",
+                  "de": "Stiller Alarm"
+                }
+              },
+              {
+                "id": "doorbell",
+                "label": {
+                  "en": "Doorbell",
+                  "de": "Türklingel"
+                }
+              },
+              {
+                "id": "blinking",
+                "label": {
+                  "en": "Blinking",
+                  "de": "Blinken"
+                }
+              },
+              {
+                "id": "arm",
+                "label": {
+                  "en": "Arm",
+                  "de": "Scharfstellen"
+                }
+              },
+              {
+                "id": "disarm",
+                "label": {
+                  "en": "Disarm",
+                  "de": "Entschärfen"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": "mt2758_turn_siren_on_default",
+        "title": {
+          "en": "Turn siren on (default sound)",
+          "nl": "Zet sirene uit"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2758"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2758"
+          }
+        ]
+      },
+      {
+        "id": "mt2758_turn_siren_off",
+        "title": {
+          "en": "Turn siren off",
+          "nl": "Zet sirene uit"
+        },
+        "args": [
+          {
+            "type": "device",
+            "name": "device",
+            "filter": "driver_id=mt2758"
+          },
+          {
+            "name": "device",
+            "type": "device",
+            "filter": "driver_id=mt2758"
+          }
+        ]
+      }
+    ]
+  }
 }

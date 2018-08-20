@@ -1,0 +1,27 @@
+{
+    "id": "mt2649",
+    "name": {
+      "en": "Room Thermostat MT2649"
+    },
+    "class": "thermostat",
+    "capabilities": [
+      "button",
+      "measure_battery",
+      "measure_temperature",
+      "target_temperature"
+    ],
+    "images": {
+      "large": "/drivers/mt2649/assets/images/large.png",
+      "small": "/drivers/mt2649/assets/images/small.png"
+    },
+    "zwave": {
+      "manufacturerId": 2,
+      "productTypeId": [
+        3
+      ],
+      "productId": [
+        32784
+      ],
+      "zwaveAllianceProductId": 1188
+    }
+  }

@@ -1,0 +1,45 @@
+{
+    "id": "mt2652",
+    "name": {
+      "en": "Scene Switch MT2652"
+    },
+    "class": "button",
+    "capabilities": [
+      "measure_battery"
+    ],
+    "images": {
+      "large": "/drivers/mt2652/assets/images/large.png",
+      "small": "/drivers/mt2652/assets/images/small.png"
+    },
+    "zwave": {
+      "manufacturerId": 373,
+      "productTypeId": [
+        256
+      ],
+      "productId": [
+        257
+      ],
+      "zwaveAllianceProductId": 1143,
+      "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1143/SceneSwitch_Manual.docx",
+      "learnmode": {
+        "instruction": {
+          "en": "Place your primary controller in inclusion mode by following the manufacturer's instructions, then activate inclusion on the wall controller by pressing any one of the four buttons for one second.  Inclusion mode is indicated by the red/green blinking of the LEDs until the timeout occurs after 10 seconds."
+        }
+      },
+      "unlearnmode": {
+        "instruction": {
+          "en": "Re-Inclusion and Exclusion are performed by pushing button 1 in management mode.  Pushing all four buttons for 5 sec. turns the device into management mode (indicated by blinking green LED)."
+        }
+      },
+      "associationGroups": [
+        1
+      ],
+      "associationGroupsOptions": {
+        "1": {
+          "hint": {
+            "en": "Z-Wave Plus Lifeline"
+          }
+        }
+      }
+    }
+  }

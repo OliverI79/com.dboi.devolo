@@ -1,0 +1,49 @@
+{
+  "id": "mt2648",
+  "name": {
+    "en": "Door/Window Sensor MT2648"
+  },
+  "class": "sensor",
+  "capabilities": [
+    "alarm_contact",
+    "alarm_tamper",
+    "measure_battery",
+    "measure_luminance",
+    "measure_temperature"
+  ],
+  "images": {
+    "large": "/drivers/mt2648/assets/images/large.png",
+    "small": "/drivers/mt2648/assets/images/small.png"
+  },
+  "zwave": {
+    "manufacturerId": 373,
+    "productTypeId": [
+      2
+    ],
+    "productId": [
+      14
+    ],
+    "zwaveAllianceProductId": 1130,
+    "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1130/Devolo home Control Door-Window.pdf",
+    "learnmode": {
+      "instruction": {
+        "en": "There are two tamper keys in the device, one is in the back side, another is in the front side.  Both of them  can add,  remove, reset or association from Z-Wave network.\nTo add into a Z-Wave network: \n1. Have Z-Wave  Controller entered inclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the inclusion mode.\n3. After add successful, the device will wake to receive the setting command from Z-Wave Controller about 20 seconds."
+      }
+    },
+    "unlearnmode": {
+      "instruction": {
+        "en": "There are two tamper keys in the device, one is in the back side, another is in the front side.  Both of them  can add,  remove, reset or association from Z-Wave network.\nTo remove the device from a Z-Wave network: \n1. Have Z-Wave  Controller entered exclusion mode.\n2. Pressing tamper key three times within 1.5 seconds to enter the exclusion mode.\nNode ID has been excluded."
+      }
+    },
+    "associationGroups": [
+      1
+    ],
+    "associationGroupsOptions": {
+      "1": {
+        "hint": {
+          "en": "Z-Wave Plus Lifeline"
+        }
+      }
+    }
+  }
+}

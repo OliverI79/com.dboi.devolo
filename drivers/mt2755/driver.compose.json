@@ -1,0 +1,48 @@
+{
+    "id": "mt2755",
+    "name": {
+      "en": "Humidity Sensor MT2755"
+    },
+    "class": "sensor",
+    "capabilities": [
+      "alarm_tamper",
+      "measure_battery",
+      "measure_humidity",
+      "measure_temperature"
+    ],
+    "images": {
+      "large": "/drivers/mt2755/assets/images/large.png",
+      "small": "/drivers/mt2755/assets/images/small.png"
+    },
+    "zwave": {
+      "manufacturerId": 373,
+      "productTypeId": [
+        2
+      ],
+      "productId": [
+        32
+      ],
+      "zwaveAllianceProductId": 2226,
+      "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2226/MT02756_MT02755_Manual.pdf",
+      "learnmode": {
+        "instruction": {
+          "en": "1. Have Z-Wave™  Controller entered inclusion mode.\r\n2. Pressing the tamper key three times within 1.5 \r\nseconds to enter the inclusion mode.\r\n3. After add successful, the device will wake to \r\nreceive the setting command from Z-Wave™ \r\nController about 20 seconds.\r\n"
+        }
+      },
+      "unlearnmode": {
+        "instruction": {
+          "en": "1. Have Z-Wave™  Controller entered exclusion mode.\r\n2. Pressing tamper key three times within 1.5 seconds\r\nto enter the exclusion mode.\r\nNode ID has been excluded.\r\n"
+        }
+      },
+      "associationGroups": [
+        1
+      ],
+      "associationGroupsOptions": {
+        "1": {
+          "hint": {
+            "en": "Z-Wave Plus Lifeline"
+          }
+        }
+      }
+    }
+  }

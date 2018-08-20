@@ -1,0 +1,47 @@
+{
+    "id": "mt2792",
+    "name": {
+      "en": "Metering Plug MT2792"
+    },
+    "class": "socket",
+    "capabilities": [
+      "measure_power",
+      "meter_power",
+      "onoff"
+    ],
+    "images": {
+      "large": "/drivers/mt2792/assets/images/large.png",
+      "small": "/drivers/mt2792/assets/images/small.png"
+    },
+    "zwave": {
+      "manufacturerId": 373,
+      "productTypeId": [
+        0
+      ],
+      "productId": [
+        0
+      ],
+      "zwaveAllianceProductId": 2057,
+      "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/2057/Home_Control_Schalt_Messsteckdose_2.0_2016_11_02_eng.pdf",
+      "learnmode": {
+        "instruction": {
+          "en": "The Home Control Smart Metering Plug can be included using two different procedures:\r\n\r\nVariant A: Auto Inclusion with the control unit\r\n1. In the Z-Wave-compatible control unit, start the procedure for adding a new device automatically.\r\n2. Plug the Home Control Smart Metering Plug into an available power socket. The Auto Inclusion is run.\r\nDuring the 2-minute timeout of the Auto Inclusion, Node Information Frames are sent within a few seconds. In the auto inclusion, it is not necessary to press the ON/OFF button.\r\n\r\nVariant B: Manual Inclusion with the control unit\r\nIf the time frame (2 minutes) of the Auto Inclusion procedure is exceeded, you can also include the Home Control Smart Metering Plug with the control unit manually.\r\n1. In the Z-Wave -compatible control unit, start the procedure for adding a new device (inclusion).\r\n2. Press the button of the connected Smart Metering Plug 3x within 1.2 seconds to start the inclusion process with the Z-Wave-compatible control unit."
+        }
+      },
+      "unlearnmode": {
+        "instruction": {
+          "en": "1. Put the Z-Wave® controller in Exclusion mode.\r\n2. Press the ON/OFF button 3x within 1.2 seconds to put the device into Exclusion mode.\r\n(indicated by white LED: 0.5 sec. ON, 0.5 sec. OFF)\r\n3. Node ID is now removed. \r\n(After the removal, the device starts again with Auto Inclusion mode.)"
+        }
+      },
+      "associationGroups": [
+        1
+      ],
+      "associationGroupsOptions": {
+        "1": {
+          "hint": {
+            "en": "As the default, the node with the ID 1 is entered in this group. This corresponds to the controller ID. For this association group 1, the Home Control Smart Metering Plug reports the status of the following command classes:\r\nSWITCH_BINARY_REPORT\r\nMETER_REPORT\r\nALARM_REPORT"
+          }
+        }
+      }
+    }
+  }

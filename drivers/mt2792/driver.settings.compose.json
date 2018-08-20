@@ -1,0 +1,227 @@
+[
+  {
+    "id": "1",
+    "value": 720,
+    "label": {
+      "en": "Watt Meter Report Period"
+    },
+    "hint": {
+      "en": "If 1 hour is set (target value =720), the Home Control Smart Metering Plug reports its power consumption at the current time every hour to the Node ID of Group 1. The maximum reporting period is 45 hours\r\n(5s*32767/3600=45hr).\r\n"
+    },
+    "zwave": {
+      "index": 1,
+      "size": 2
+    },
+    "attr": {
+      "min": 1,
+      "max": 32767
+    },
+    "type": "number"
+  },
+  {
+    "id": "2",
+    "value": 6,
+    "label": {
+      "en": "KWh Report Period"
+    },
+    "hint": {
+      "en": "If 1 hour is set (target value =6), the Home Control Smart Metering Plug reports its accumulated power consumption every hour to the Node ID of Group 1. The maximum reporting period is\r\n227.55 days (10s*32767/1440=227.55 days).\r\n\r\n"
+    },
+    "zwave": {
+      "index": 2,
+      "size": 2
+    },
+    "attr": {
+      "min": 1,
+      "max": 32767
+    },
+    "type": "number"
+  },
+  {
+    "id": "3",
+    "value": 1300,
+    "label": {
+      "en": "Threshold of current for Load caution "
+    },
+    "hint": {
+      "en": "If the current load exceeds the defined value, the Home Control Smart Metering Plug sends a meter message to the Node ID of Group 1. \r\n"
+    },
+    "zwave": {
+      "index": 3,
+      "size": 2
+    },
+    "attr": {
+      "min": 10,
+      "max": 1300
+    },
+    "type": "number"
+  },
+  {
+    "id": "4",
+    "value": 10000,
+    "label": {
+      "en": "Threshold of KWh for Load caution"
+    },
+    "hint": {
+      "en": "If the kW load exceeds the defined value (default value: 10,000, for an elevated accumulated power consumption), the Home Control Smart Metering Plug sends a meter message to the Node ID 1.\r\n"
+    },
+    "zwave": {
+      "index": 4,
+      "size": 2
+    },
+    "attr": {
+      "min": 1,
+      "max": 10000
+    },
+    "type": "number"
+  },
+  {
+    "id": "5",
+    "value": "1",
+    "label": {
+      "en": "Restore switch state mode "
+    },
+    "hint": {
+      "en": "If the Home Control Smart Metering Plug is disconnected from the mains power supply and then reconnected to the mains power supply, depending on the configuration, it will trigger the Switch OFF, set the Last Switch State or set the Switch ON. The default setting is always the last switch state.\r\n\r\n"
+    },
+    "zwave": {
+      "index": 5,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Switch off"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Last switch state"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Switch on"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "6",
+    "value": 1,
+    "label": {
+      "en": "Mode of Switch OFF function "
+    },
+    "hint": {
+      "en": "If Switch ON/OFF is set to 0, both the Switch OFF command and the ON/OFF button are disabled. The default setting is the enable switching.\r\n"
+    },
+    "zwave": {
+      "index": 6,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 0
+    },
+    "type": "number"
+  },
+  {
+    "id": "7",
+    "value": "1",
+    "label": {
+      "en": "LED indication mode"
+    },
+    "hint": {
+      "en": "1 Display device status\r\nWhen the Home Control Smart Metering Plug is switched on, the LED is on; when the Home Control Smart Metering Plug is switched off, the LED is off. In the default setting, the device status is displayed.\r\n\r\n2 Show nighttime mode:\r\nWhen the Home Control Smart Metering Plug is switched on, the LED is off; when the Home Control Smart Metering Plug is switched off, the LED is on.\r\n\r\n3 One-flash mode:\r\nIf the device status changes, the LED flashes briefly (1 sec.) and then goes out.\r\n\r\n"
+    },
+    "zwave": {
+      "index": 7,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "1",
+        "label": {
+          "en": "Show switch state"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Show night mode"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "One flash mode"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "8",
+    "value": 0,
+    "label": {
+      "en": "Auto off timer "
+    },
+    "hint": {
+      "en": "If the Home Control Smart Metering Plug switches to ON, the auto-off timer starts counting down. After the timer is set to zero, the device shuts off automatically. If the auto-off timer function is set to 0, it is disabled.\r\n\r\n"
+    },
+    "zwave": {
+      "index": 8,
+      "size": 2
+    },
+    "attr": {
+      "min": 0,
+      "max": 0
+    },
+    "type": "number"
+  },
+  {
+    "id": "9",
+    "value": "0",
+    "label": {
+      "en": "RF off command mode "
+    },
+    "hint": {
+      "en": "If the command Switch OFF BASIC_SET 、BINARY_SWITCH_SET 、SWITCH_ALL_OFF is received, this can be interpreted in four different ways:\r\n0. Switch OFF:\r\nThe Home Control Smart Metering Plug switches itself off (default setting).\r\n\r\n1. Ignore:\r\nThe command Switch OFF is ignored.\r\n\r\n2. Switch device:\r\nThe Home Control Smart Metering Plug switches to the opposite state.\r\n\r\n3. Switch ON:\r\nThe Home Control Smart Metering Plug switches itself on.\r\n"
+    },
+    "zwave": {
+      "index": 9,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Switch off"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Ignore"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Switch toggle"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Switch on "
+        }
+      }
+    ],
+    "type": "dropdown"
+  }
+]

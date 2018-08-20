@@ -1,0 +1,191 @@
+[
+  {
+    "id": "5",
+    "value": 33,
+    "label": {
+      "en": "Operation Mode",
+      "de": "Betriebsmodus"
+    },
+    "hint": {
+      "en": "Operation mode. Using bit to control."
+    },
+    "zwave": {
+      "index": 5,
+      "size": 1,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "type": "number"
+  },
+  {
+    "id": "6",
+    "value": 64,
+    "label": {
+      "en": "Multi-Sensorfunktion Schalter"
+    },
+    "hint": {
+      "en": ""
+    },
+    "zwave": {
+      "index": 6,
+      "size": 1,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "type": "number"
+  },
+  {
+    "id": "7",
+    "value": 0,
+    "label": {
+      "en": "Customer Function",
+      "de": "Anwenderfunktion"
+    },
+    "hint": {
+      "en": "Customer function switch, using bit control."
+    },
+    "zwave": {
+      "index": 7,
+      "size": 1,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "type": "number"
+  },
+  {
+    "id": "10",
+    "value": 12,
+    "label": {
+      "en": "Auto Report Battery Time",
+      "de": "Auto-Report Batteriestandsmeldung"
+    },
+    "hint": {
+      "en": "The interval time for auto report the battery level. \r\n0 means turn off auto report.\r\nThe default value is 12. The tick time can setting by the configuration No.20.",
+      "de": "Intervallzeit für automatische Batteriestandsmeldung\n0= automatische Batteriestandsmeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+    },
+    "zwave": {
+      "index": 10,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "13",
+    "value": 12,
+    "label": {
+      "en": "Auto Report Temperature Time",
+      "de": "Auto-Report Temperaturmeldung"
+    },
+    "hint": {
+      "en": "The interval time for auto report the temperature. \r\n0 means turn off auto report.\r\nThe default value is 12. The tick time can setting by the configuration No.20.",
+      "de": "Intervallzeit für automatische Temperaturmeldung\n0= automatische Temperaturmeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+    },
+    "zwave": {
+      "index": 13,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "14",
+    "value": 12,
+    "label": {
+      "en": "Auto Report Humidity Time",
+      "de": "Auto-Report Feuchtigkeitsmeldung"
+    },
+    "hint": {
+      "en": "The interval time for auto report the humidity. \r\n0 means turn off auto report.\r\nThe default value is 12. The tick time can setting by the configuration No.20.",
+      "de": "Intervallzeit für automatische Feuchtigkeitsmeldung\n0= automatische Feuchtigkeitsmeldung deaktivieren.\nDer Standardwert ist 12. Die Tick-Zeit wird unter Konfiguration Nr.20 eingestellt."
+    },
+    "zwave": {
+      "index": 14,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "20",
+    "value": 30,
+    "label": {
+      "en": "Auto Report Tick Interval",
+      "de": "Auto-Report Tick-Intervall"
+    },
+    "hint": {
+      "en": "The interval time for auto report each tick.\r\nSetting this configuration will effect configuration No.10, No.13, \r\nNo.14.Units of one minute.\r\nCaution 1:Setting to 0 means turn off all auto report function.\r\nCaution 2:The value is unsigned byte",
+      "de": "Einstellung Intervallzeit pro Tick; diese Einstellung hat Auswirkung auf die Konfigurationen Nr.10, Nr.13, Nr.14 und Nr.15.\nHinweis 1: 0 = automatische Report-Funktion deaktivieren.\nHinweis 2:\nWert=unsigniertes Byte, Bereich von 0x00 ~ 0xFF."
+    },
+    "zwave": {
+      "index": 20,
+      "size": 1,
+      "signed": false
+    },
+    "attr": {
+      "min": 0,
+      "max": 255
+    },
+    "type": "number"
+  },
+  {
+    "id": "21",
+    "value": 1,
+    "label": {
+      "en": "Temperature Differential Report",
+      "de": "Temperaturdifferenz-Meldung"
+    },
+    "hint": {
+      "en": "The temperature differential to report.\r\n0 means turn off this function. \r\nThe unit is Fahrenheit.\r\nEnable this function the device will detect every 10 seconds. \r\nAnd when the temperature is over 140 degree Fahrenheit, it will continue report.",
+      "de": "Temperaturdifferenz-Meldung 0 = Funktion deaktivieren.\nDie Maßeinheit ist Fahrenheit/Celsius.\nBei aktivierter Funktion, erfasst das Gerät alle 10 Sekunden die Temperatur. Ist die Temperatur über 60° Celsius, meldet das Gerät weiter.\nIst die Funktion aktiv, beachten Sie die Hinweise im Abschnitt „Temperaturmeldung“."
+    },
+    "zwave": {
+      "index": 21,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 127
+    },
+    "type": "number"
+  },
+  {
+    "id": "23",
+    "value": 5,
+    "label": {
+      "en": "Humidity Differential Report",
+      "de": "Feuchtigkeitsdifferenz-Meldung"
+    },
+    "hint": {
+      "en": "The humidity differential to report.\r\n0 means turn off this function. \r\nThe unit is percentage.\r\nEnable this function the device will detect every 10 seconds.",
+      "de": "Feuchtigkeitsdifferenz-Meldung\n0 = Funktion deaktivieren\nDie Maßeinheit ist Prozent.\nBei aktivierter Funktion, erfasst das Gerät alle 10 Sekunden die Feuchtigkeit."
+    },
+    "zwave": {
+      "index": 23,
+      "size": 1
+    },
+    "attr": {
+      "min": 0,
+      "max": 60
+    },
+    "type": "number"
+  }
+]

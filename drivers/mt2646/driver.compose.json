@@ -1,0 +1,47 @@
+{
+    "id": "mt2646",
+    "name": {
+      "en": "Metering Plug MT2646"
+    },
+    "class": "socket",
+    "capabilities": [
+      "measure_power",
+      "meter_power",
+      "onoff"
+    ],
+    "images": {
+      "large": "/drivers/mt2646/assets/images/large.png",
+      "small": "/drivers/mt2646/assets/images/small.png"
+    },
+    "zwave": {
+      "manufacturerId": 373,
+      "productTypeId": [
+        1
+      ],
+      "productId": [
+        17
+      ],
+      "zwaveAllianceProductId": 1129,
+      "zwaveAllianceProductDocumentation": "https://Products.Z-WaveAlliance.org/ProductManual/File?folder=&filename=Manuals/1129/PAN11-1B manual-20140816.pdf",
+      "learnmode": {
+        "instruction": {
+          "en": "1.  Put your Z-Wave controller into inclusion mode by following the instructions provided by the controller manufacturer. \n2.  Pressing On/Off button three times within 2 seconds will enter inclusion \n     mode on the switch. "
+        }
+      },
+      "unlearnmode": {
+        "instruction": {
+          "en": "1.  Put your Z-Wave controller into exclusion mode by following the instructions provided by the controller manufacturer. \n2.  Pressing On/Off button three times within 2 seconds will enter exclusion \n     mode on the switch. "
+        }
+      },
+      "associationGroups": [
+        1
+      ],
+      "associationGroupsOptions": {
+        "1": {
+          "hint": {
+            "en": "Z-Wave Plus Lifeline"
+          }
+        }
+      }
+    }
+  }

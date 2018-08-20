@@ -10,11 +10,10 @@
   },
   "devDependencies": {},
   "scripts": {
-    "run": "copy /y app.json.base app.json && homeyConfig compose && athom app run",
-    "validate": "copy /y app.json.base app.json && homeyConfig compose && athom app validate",
-    "build": "copy /y app.json.base app.json && homeyConfig compose && athom app build",
-    "compose": "copy /y app.json.base app.json && homeyConfig compose",
-    "install": "copy /y app.json.base app.json && homeyConfig compose && athom app install"
+    "run": "copy /y app.json.base app.json && athom app run",
+    "validate": "copy /y app.json.base app.json && athom app validate",
+    "build": "copy /y app.json.base app.json && athom app build",
+    "install": "copy /y app.json.base app.json && athom app install"
   },
   "repository": {
     "type": "git",

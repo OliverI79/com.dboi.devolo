@@ -1,0 +1,553 @@
+[
+  {
+    "id": "1",
+    "value": "1",
+    "label": {
+      "en": "Button 1 and 3 pair mode",
+      "de": "Taster 1 und 3 gekoppelt"
+    },
+    "hint": {
+      "en": "In separate mode button 1 works with group A, button 3 with groups C. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. In pair button 1/3 are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group A, double click with group C.",
+      "de": "Im entkoppelten Modus steuert Taster 1 die Gruppe A und Taster 3 die Gruppe C, im gekoppelten Modus steuern beide die Gruppen A und C, wobei Einfachklick Gruppe A und Doppelklick Gruppe C schaltet."
+    },
+    "zwave": {
+      "index": 1,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "seperately",
+          "de": "Taster 1 und 3 sind unabängig"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "In pair without double clicks",
+          "de": "Taster 1 und 3 steuern gemeinsam. Doppelklick wird nicht beachtet"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "In pair with double clicks",
+          "de": "Taster 1 und 3 steuern gemeinsam. Doppelklick wird beachtet"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "2",
+    "value": "1",
+    "label": {
+      "en": "Button 2 and 4 pair mode",
+      "de": "Taster 2 und 4 gekoppelt"
+    },
+    "hint": {
+      "en": "In separate mode button 2 works with control group B, button 4 with control group D. Click is On, Hold is dimming Up, Double click is Off, Click-Hold is dimming Down. In pair button B/D are Up/Down correspondingly. Click is On/Off, Hold is dimming Up/Down. Single clicks works with group B, double click with group D.",
+      "de": "Im entkoppelten Modus steuert Taster 2 die Gruppe B und Taste 4 die Gruppe D, im gekoppelten Modus steuern beide die Gruppen B und D, wobei Einfachklick Gruppe B und Doppelklick Gruppe D schaltet."
+    },
+    "zwave": {
+      "index": 2,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "seperately",
+          "de": "Taster 2 und 4 sind unabängig"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "In pair without double clicks",
+          "de": "Taster 2 und 4 steuern gemeinsam. Doppelklick wird nicht beachtet"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "In pair with double clicks",
+          "de": "Taster 2 und 4 steuern gemeinsam. Doppelklick wird beachtet"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "11",
+    "value": "8",
+    "label": {
+      "en": "Command to Control Group A",
+      "de": "Kommando an Steuergruppe A"
+    },
+    "hint": {
+      "en": "This parameter defines the command to be sent to devices of control group A when the related button is pressed",
+      "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe A gesendet wird."
+    },
+    "zwave": {
+      "index": 11,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
+          "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Switch On/Off only (send Basic Set)",
+          "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Switch All",
+          "de": "Switch All Kommando"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Send Scenes",
+          "de": "Szenenaktivierung"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Send Preconfigured Scenes",
+          "de": "Vorkonfigurierte Szenen werden gesendet"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Control using Home Control",
+          "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
+        }
+      },
+      {
+        "id": "7",
+        "label": {
+          "en": "Control DoorLock",
+          "de": "Control DoorLock"
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Central Scene to Gateway",
+          "de": "Zentrale Szene im Gateway"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "12",
+    "value": "8",
+    "label": {
+      "en": "Command to Control Group B",
+      "de": "Kommando an Steuergruppe B"
+    },
+    "hint": {
+      "en": "This parameter defines the command to be sent to devices of control group B when the related button is pressed",
+      "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe B gesendet wird."
+    },
+    "zwave": {
+      "index": 12,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
+          "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Switch On/Off only (send Basic Set)",
+          "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Switch All",
+          "de": "Switch All Kommando"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Send Scenes",
+          "de": "Szenenaktivierung"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Send Preconfigured Scenes",
+          "de": "Vorkonfigurierte Szenen werden gesendet"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Control using Home Control",
+          "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
+        }
+      },
+      {
+        "id": "7",
+        "label": {
+          "en": "Control DoorLock",
+          "de": "Control DoorLock"
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Central Scene to Gateway",
+          "de": "Zentrale Szene im Gateway"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "13",
+    "value": "8",
+    "label": {
+      "en": "Command to Control Group C",
+      "de": "Kommando an Steuergruppe C"
+    },
+    "hint": {
+      "en": "This parameter defines the command to be sent to devices of control group C when the related button is pressed",
+      "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe C gesendet wird."
+    },
+    "zwave": {
+      "index": 13,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
+          "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Switch On/Off only (send Basic Set)",
+          "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Switch All",
+          "de": "Switch All Kommando"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Send Scenes",
+          "de": "Szenenaktivierung"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Send Preconfigured Scenes",
+          "de": "Vorkonfigurierte Szenen werden gesendet"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Control using Home Control",
+          "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
+        }
+      },
+      {
+        "id": "7",
+        "label": {
+          "en": "Control DoorLock",
+          "de": "Control DoorLock"
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Central Scene to Gateway",
+          "de": "Zentrale Szene im Gateway"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "14",
+    "value": "8",
+    "label": {
+      "en": "Command to Control Group D",
+      "de": "Kommando an Steuergruppe D"
+    },
+    "hint": {
+      "en": "This parameter defines the command to be sent to devices of control group D when the related button is pressed",
+      "de": "Dieser Parameter definiert das Schaltkommando, das an Geräte in Steuergruppe D gesendet wird."
+    },
+    "zwave": {
+      "index": 14,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Disabled",
+          "de": "Deaktiviert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Switch On/Off and Dim (send Basic Set and Switch Multilevel)",
+          "de": "Schaltkommandos Ein und Aus mittels Basic und SwitchMultilevel Kommando"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Switch On/Off only (send Basic Set)",
+          "de": "Schaltkommandos Ein und Aus mittels Basic Kommando"
+        }
+      },
+      {
+        "id": "3",
+        "label": {
+          "en": "Switch All",
+          "de": "Switch All Kommando"
+        }
+      },
+      {
+        "id": "4",
+        "label": {
+          "en": "Send Scenes",
+          "de": "Szenenaktivierung"
+        }
+      },
+      {
+        "id": "5",
+        "label": {
+          "en": "Send Preconfigured Scenes",
+          "de": "Vorkonfigurierte Szenen werden gesendet"
+        }
+      },
+      {
+        "id": "6",
+        "label": {
+          "en": "Control using Home Control",
+          "de": "Alle Geräte in der Nähe werden durch den Home Control Funkschalter gesteuert"
+        }
+      },
+      {
+        "id": "7",
+        "label": {
+          "en": "Control DoorLock",
+          "de": "Control DoorLock"
+        }
+      },
+      {
+        "id": "8",
+        "label": {
+          "en": "Central Scene to Gateway",
+          "de": "Zentrale Szene im Gateway"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "21",
+    "value": "0",
+    "label": {
+      "en": "Send the following Switch All commands",
+      "de": "Sende die folgenden 'Switch All' Kommandos"
+    },
+    "hint": {
+      "en": ""
+    },
+    "zwave": {
+      "index": 21,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Switch off only",
+          "de": "Nur alle ausschalten"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Switch on only",
+          "de": "Nur alle Einschalten"
+        }
+      },
+      {
+        "id": "255",
+        "label": {
+          "en": "Switch all on and off",
+          "de": "Alle einschalten und ausschalten"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "22",
+    "value": "0",
+    "label": {
+      "en": "Invert buttons",
+      "de": "Invertieren der Tastenbedeutung Hoch und Runter"
+    },
+    "hint": {
+      "en": ""
+    },
+    "zwave": {
+      "index": 22,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "No",
+          "de": "Nein"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "Yes",
+          "de": "Ja"
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "25",
+    "value": "0",
+    "label": {
+      "en": "Blocks wakeup even when wakeup interval is set",
+      "de": "Blockiert das Aufwecken des Gerätes selbst bei gesetztem Aufweckinterval"
+    },
+    "hint": {
+      "en": "",
+      "de": "Weckt der KFOB auf und es befindet sich kein Controller in der Nähe, wird mit erfolglosen Kommunikationsversuchen viel Batterieleistung verbraucht."
+    },
+    "zwave": {
+      "index": 25,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "Block",
+          "de": "Aufwecken blockiert"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "WakeUp",
+          "de": "WakeUp findet bei entsprechender Konfiguration statt."
+        }
+      }
+    ],
+    "type": "dropdown"
+  },
+  {
+    "id": "30",
+    "value": "1",
+    "label": {
+      "en": "Send unsolicited Battery Report on Wake Up",
+      "de": "Sende beim Aufwecken unaufgefordert eine Batterie-Statusmeldung"
+    },
+    "hint": {
+      "en": ""
+    },
+    "zwave": {
+      "index": 30,
+      "size": 1
+    },
+    "values": [
+      {
+        "id": "0",
+        "label": {
+          "en": "No",
+          "de": "Nein"
+        }
+      },
+      {
+        "id": "1",
+        "label": {
+          "en": "To same node as wake up notification",
+          "de": "An das gleiche Gerät wie die Aufweck-Meldung"
+        }
+      },
+      {
+        "id": "2",
+        "label": {
+          "en": "Broadcast",
+          "de": "Broadcast an alle Nachbarn"
+        }
+      }
+    ],
+    "type": "dropdown"
+  }
+]
