@@ -220,25 +220,25 @@
       {
         "id": "0",
         "label": {
-          "en": "When SWITCH ALL OFF is received, the MT02646 turns Off."
+          "en": "When SWITCH ALL OFF is received, switch turns Off."
         }
       },
       {
         "id": "1",
         "label": {
-          "en": "When SWITCH ALL OFF is received, the MT02646 ignores the command and does nothing."
+          "en": "When SWITCH ALL OFF is received, switch ignores the command and does nothing."
         }
       },
       {
         "id": "2",
         "label": {
-          "en": "When SWITCH ALL OFF is received, the MT02646 will turn On if it is Off, and will turn Off if it is On."
+          "en": "When SWITCH ALL OFF is received, switch will turn On if it is Off, and will turn Off if it is On."
         }
       },
       {
         "id": "3",
         "label": {
-          "en": "When SWITCH ALL OFF is received, the MT02646 turns On."
+          "en": "When SWITCH ALL OFF is received, switch turns On."
         }
       }
     ],

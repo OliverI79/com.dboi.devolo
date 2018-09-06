@@ -49,6 +49,29 @@
         "large": "/drivers/mt2646/assets/images/large.png",
         "small": "/drivers/mt2646/assets/images/small.png"
       },
+      "mobile": {
+        "components": [
+          {
+            "id": "icon",
+            "capabilities": [
+              "onoff"
+            ]
+          },
+          {
+            "id": "sensor",
+            "capabilities": [
+              "meter_power",
+              "measure_power"
+            ]
+          },
+          {
+            "id": "toggle",
+            "capabilities": [
+              "onoff"
+            ]
+          }
+        ]
+      },
       "zwave": {
         "manufacturerId": 373,
         "productTypeId": [
@@ -302,25 +325,25 @@
             {
               "id": "0",
               "label": {
-                "en": "When SWITCH ALL OFF is received, the MT02646 turns Off."
+                "en": "When SWITCH ALL OFF is received, switch turns Off."
               }
             },
             {
               "id": "1",
               "label": {
-                "en": "When SWITCH ALL OFF is received, the MT02646 ignores the command and does nothing."
+                "en": "When SWITCH ALL OFF is received, switch ignores the command and does nothing."
               }
             },
             {
               "id": "2",
               "label": {
-                "en": "When SWITCH ALL OFF is received, the MT02646 will turn On if it is Off, and will turn Off if it is On."
+                "en": "When SWITCH ALL OFF is received, switch will turn On if it is Off, and will turn Off if it is On."
               }
             },
             {
               "id": "3",
               "label": {
-                "en": "When SWITCH ALL OFF is received, the MT02646 turns On."
+                "en": "When SWITCH ALL OFF is received, switch turns On."
               }
             }
           ],
@@ -3433,7 +3456,7 @@
       {
         "id": "mt2652_button",
         "title": {
-          "en": "Then button is pressed"
+          "en": "The button is pressed"
         },
         "tokens": [
           {
@@ -3449,11 +3472,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=mt2652"
-          },
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
           }
         ]
       },
@@ -3466,11 +3484,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=mt2652"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=mt2652"
           }
         ]
@@ -3485,11 +3498,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=mt2652"
-          },
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
           }
         ]
       },
@@ -3502,11 +3510,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=mt2652"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=mt2652"
           }
         ]
@@ -3521,11 +3524,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=mt2652"
-          },
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
           }
         ]
       },
@@ -3538,11 +3536,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=mt2652"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=mt2652"
           }
         ]
@@ -3557,11 +3550,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=mt2652"
-          },
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
           }
         ]
       },
@@ -3575,11 +3563,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=mt2652"
-          },
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2652"
           }
         ]
       },
@@ -3592,11 +3575,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=mt2652"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=mt2652"
           }
         ]
@@ -3620,11 +3598,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=mt2653"
-          },
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
           }
         ]
       },
@@ -3637,11 +3610,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=mt2653"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=mt2653"
           }
         ]
@@ -3656,11 +3624,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=mt2653"
-          },
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
           }
         ]
       },
@@ -3673,11 +3636,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=mt2653"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=mt2653"
           }
         ]
@@ -3692,11 +3650,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=mt2653"
-          },
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
           }
         ]
       },
@@ -3709,11 +3662,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=mt2653"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=mt2653"
           }
         ]
@@ -3728,11 +3676,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=mt2653"
-          },
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
           }
         ]
       },
@@ -3745,11 +3688,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=mt2653"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=mt2653"
           }
         ]
@@ -3764,11 +3702,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=mt2653"
-          },
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2653"
           }
         ]
       },
@@ -3782,11 +3715,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=mt2758"
-          },
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2758"
           }
         ]
       },
@@ -3799,11 +3727,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=mt2758"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=mt2758"
           }
         ]
@@ -3820,11 +3743,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=mt2758"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=mt2758"
           },
           {
@@ -3909,11 +3827,6 @@
             "type": "device",
             "name": "device",
             "filter": "driver_id=mt2758"
-          },
-          {
-            "name": "device",
-            "type": "device",
-            "filter": "driver_id=mt2758"
           }
         ]
       },
@@ -3927,11 +3840,6 @@
           {
             "type": "device",
             "name": "device",
-            "filter": "driver_id=mt2758"
-          },
-          {
-            "name": "device",
-            "type": "device",
             "filter": "driver_id=mt2758"
           }
         ]
